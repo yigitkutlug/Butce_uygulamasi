@@ -43,7 +43,7 @@ def load_model() -> Pipeline:
     if _cached_model is not None:
         return _cached_model
 
-    if MODEL_PATH.exists():
+    if MODEL_PATH.exists() and MODEL_PATH.stat().st_mtime >= SEED_PATH.stat().st_mtime:
         with open(MODEL_PATH, "rb") as f:
             _cached_model = pickle.load(f)
             return _cached_model
