@@ -6,6 +6,7 @@ from app.services.coach import (
     _has_explicit_purchase_amount,
     _affordability_status,
     _build_affordability_reply,
+    _estimated_market_quote,
     _is_finance_related,
     _is_installment_planning_prompt,
     _looks_like_product_research_prompt,
@@ -83,11 +84,15 @@ def test_affordability_status_uses_safe_installment_limit():
     assert _affordability_status(1500, 3000) == ("alınabilir", "safe")
 
 
-def test_product_affordability_reply_does_not_invent_unverified_price():
+def test_product_affordability_reply_uses_estimated_price_range():
     reply = _build_affordability_reply(
         "iPhone",
         {
             "price_verified": False,
+            "price_type": "estimated",
+            "price_min_try": 35000,
+            "price_max_try": 45000,
+            "price_note": "Tahmini piyasa aralığı.",
             "alternatives": ["daha uygun telefon"],
         },
         remaining=10000,
@@ -95,7 +100,24 @@ def test_product_affordability_reply_does_not_invent_unverified_price():
         installment_count=12,
     )
 
-    assert "güncel fiyatı doğrulayamadım" in reply["reply"]
+    assert "tahmini piyasa fiyat aralığı" in reply["reply"]
+    assert "kesin değil" in reply["reply"]
+    assert reply["risk_level"] in {"warning", "danger", "safe"}
+
+
+def test_product_affordability_reply_uses_unavailable_only_as_last_resort():
+    reply = _build_affordability_reply(
+        "bilinmeyen ürün",
+        {
+            "price_type": "unavailable",
+            "alternatives": [],
+        },
+        remaining=10000,
+        monthly_debt=0,
+        installment_count=12,
+    )
+
+    assert "güvenilir güncel fiyat veya makul piyasa aralığı bulamadım" in reply["reply"]
     assert reply["risk_level"] == "info"
 
 
@@ -118,3 +140,11 @@ def test_product_affordability_reply_marks_installment_above_limit_danger():
     assert "uygun değil" in reply["reply"]
     assert "güvenli aylık taksit limitin 3000.00 TL" in reply["reply"]
     assert reply["risk_level"] == "danger"
+
+
+def test_estimated_market_quote_returns_helpful_range_for_known_product():
+    quote = _estimated_market_quote("iPhone almak istiyorum")
+
+    assert quote is not None
+    assert quote["price_type"] == "estimated"
+    assert quote["price_min_try"] > 0

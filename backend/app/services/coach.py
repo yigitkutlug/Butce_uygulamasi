@@ -354,11 +354,15 @@ def _product_budget_question_reply(product: str, remaining: float | None) -> dic
 def _build_grounded_product_price_prompt(product: str, user_message: str, budget_context: str) -> str:
     return f"""
 Sen Türkçe konuşan bir bütçe analizi asistanısın.
-Google Search kullanarak ürünün Türkiye'deki güncel fiyatını doğrula.
+Google Search kullanarak ürünün Türkiye'deki güncel fiyatını veya makul piyasa aralığını bul.
 
 ÇOK ÖNEMLİ KURALLAR:
-- Fiyatı web sonucundan doğrulayamazsan price_verified=false yap.
-- Fiyat uydurma, tahmin etme, "genelde şu kadardır" deme.
+- Önce güncel ve mümkünse kesin fiyat ara.
+- Kesin fiyat bulursan price_type="exact" yap.
+- Kesin fiyat bulamazsan piyasadaki makul ortalama fiyat aralığını tahmin et ve price_type="estimated" yap.
+- Tahmini fiyat verirken bunu price_note içinde açıkça belirt.
+- Sadece ürün tamamen belirsizse veya hiçbir piyasa bilgisi yoksa price_type="unavailable" yap.
+- Kullanıcıya yardımcı olacak yaklaşık değerlendirme sunmak önceliklidir; unavailable son çaredir.
 - Sadece JSON döndür, JSON dışında açıklama yazma.
 - Fiyat aralığı TRY cinsinden olmalı.
 - Alternatif ürünler daha uygun bütçeli seçenekler olmalı.
@@ -368,9 +372,10 @@ JSON ŞEMASI:
 {{
   "product_name": "ürün adı",
   "price_verified": true,
+  "price_type": "exact",
   "price_min_try": 0,
   "price_max_try": 0,
-  "price_note": "fiyatın hangi modele/kapasiteye göre değiştiği",
+  "price_note": "kesin fiyat mı, tahmini piyasa aralığı mı; hangi modele/kapasiteye göre değiştiği",
   "alternatives": ["alternatif 1", "alternatif 2"],
   "sources": ["kaynak adı 1", "kaynak adı 2"]
 }}
@@ -446,13 +451,50 @@ def _installment_lines(price: float, safe_limit: float, requested_count: int | N
 def _grounded_price_unavailable_reply(product: str, remaining: float | None) -> dict:
     return {
         "reply": (
-            f"{product} için güncel fiyatı doğrulayamadım; bu yüzden fiyat uydurup bütçe kararı vermiyorum. "
-            "Model/kapasiteyi daha net yazarsan tekrar arayabilirim. "
-            "Alternatif olarak aynı ihtiyacı daha düşük bütçeyle karşılayacak bir model seçmek mantıklı olabilir."
+            f"{product} için güvenilir güncel fiyat veya makul piyasa aralığı bulamadım. "
+            "Bu nedenle fiyat uydurmuyorum; model, kapasite veya mağaza bilgisini biraz daha net yazarsan tekrar arayabilirim. "
+            "Alternatif olarak aynı ihtiyacı karşılayan daha uygun segment bir ürün düşünmek mantıklı olabilir."
         ),
         "remaining_budget": round(remaining, 2) if remaining is not None else None,
         "risk_level": "info",
     }
+
+
+def _price_type(quote: dict) -> str:
+    raw = str(quote.get("price_type") or "").strip().lower()
+    if raw in {"exact", "estimated", "unavailable"}:
+        return raw
+    if quote.get("price_verified") is True:
+        return "exact"
+    return "estimated"
+
+
+def _estimated_market_quote(product: str) -> dict | None:
+    text = product.lower()
+    estimates: list[tuple[tuple[str, ...], tuple[int, int], list[str]]] = [
+        (("iphone",), (35000, 95000), ["iPhone SE", "önceki nesil iPhone"]),
+        (("telefon", "akıllı telefon", "akilli telefon"), (8000, 45000), ["Samsung Galaxy A serisi", "Xiaomi Redmi/POCO modelleri"]),
+        (("macbook",), (35000, 95000), ["MacBook Air önceki nesil", "Windows ultrabook"]),
+        (("laptop", "bilgisayar"), (15000, 60000), ["Lenovo IdeaPad", "ASUS VivoBook"]),
+        (("tablet", "ipad"), (8000, 45000), ["Samsung Galaxy Tab", "iPad önceki nesil"]),
+        (("airpods", "kulaklık", "kulaklik"), (1000, 12000), ["Anker Soundcore", "JBL kulaklık"]),
+        (("akıllı saat", "akilli saat", "smartwatch", "apple watch"), (1500, 25000), ["Huawei Watch Fit", "Samsung Galaxy Watch eski nesil"]),
+        (("ps5", "playstation", "xbox"), (18000, 35000), ["ikinci el konsol", "önceki nesil konsol"]),
+        (("televizyon", "tv"), (10000, 60000), ["TCL/Grundig orta segment", "daha küçük ekran TV"]),
+    ]
+    for keywords, price_range, alternatives in estimates:
+        if any(keyword in text for keyword in keywords):
+            return {
+                "product_name": product,
+                "price_verified": False,
+                "price_type": "estimated",
+                "price_min_try": price_range[0],
+                "price_max_try": price_range[1],
+                "price_note": "Güncel kesin fiyat doğrulanamadı; ürün kategorisinin piyasadaki yaklaşık aralığıyla tahmini analiz yapıyorum.",
+                "alternatives": alternatives,
+                "sources": [],
+            }
+    return None
 
 
 def _build_affordability_reply(
@@ -462,18 +504,36 @@ def _build_affordability_reply(
     monthly_debt: float,
     installment_count: int | None,
 ) -> dict:
-    verified = bool(quote.get("price_verified"))
+    price_type = _price_type(quote)
     min_price = _safe_float(quote.get("price_min_try"))
     max_price = _safe_float(quote.get("price_max_try"))
-    if not verified or min_price is None or max_price is None or min_price <= 0 or max_price <= 0:
+    if (
+        price_type == "unavailable"
+        or min_price is None
+        or max_price is None
+        or min_price <= 0
+        or max_price <= 0
+    ):
         return _grounded_price_unavailable_reply(product, remaining)
 
     price = max(min_price, max_price)
+    price_intro = (
+        "güncel kesin fiyat"
+        if price_type == "exact"
+        else "tahmini piyasa fiyat aralığı"
+    )
+    estimate_note = (
+        " Bu fiyat kesin değil; piyasadaki ortalama aralık üzerinden tahmini değerlendirme yapıyorum."
+        if price_type == "estimated"
+        else ""
+    )
+    note = str(quote.get("price_note") or "").strip()
+    note_sentence = f" {note}" if note else ""
     if remaining is None:
         return {
             "reply": (
-                f"{quote.get('product_name') or product} için güncel fiyatı yaklaşık "
-                f"{min_price:.0f}-{max_price:.0f} TL aralığında doğruladım; ancak aylık gelir hedefin olmadığı için "
+                f"{quote.get('product_name') or product} için {price_intro} yaklaşık "
+                f"{min_price:.0f}-{max_price:.0f} TL aralığında.{estimate_note}{note_sentence} Ancak aylık gelir hedefin olmadığı için "
                 "bütçe uygunluğunu net hesaplayamıyorum. Profilde aylık gelirini girersen kalan bütçenin %30'una göre "
                 "taksit analizi yapabilirim. Alternatif olarak daha düşük segment veya önceki nesil modellere bak."
             ),
@@ -508,8 +568,8 @@ def _build_affordability_reply(
 
     return {
         "reply": (
-            f"{quote.get('product_name') or product} için güncel fiyatı yaklaşık "
-            f"{min_price:.0f}-{max_price:.0f} TL aralığında doğruladım. "
+            f"{quote.get('product_name') or product} için {price_intro} yaklaşık "
+            f"{min_price:.0f}-{max_price:.0f} TL aralığında.{estimate_note}{note_sentence} "
             f"Kalan bütçen {remaining:.2f} TL, aktif aylık borç/ödeme yükün yaklaşık {monthly_debt:.2f} TL ve "
             f"güvenli aylık taksit limitin {safe_limit:.2f} TL. "
             f"{payment_sentence} Bu nedenle bu alışveriş bütçene göre {status}. "
@@ -532,6 +592,17 @@ async def _grounded_product_affordability_reply(
     installment_count: int | None,
 ) -> dict:
     if not settings.gemini_api_key:
+        estimated_quote = _estimated_market_quote(product)
+        if estimated_quote is not None:
+            monthly_debt = await _active_monthly_debt_total(user_id)
+            adjusted_remaining = remaining - monthly_debt if remaining is not None else None
+            return _build_affordability_reply(
+                product,
+                estimated_quote,
+                adjusted_remaining,
+                monthly_debt,
+                installment_count,
+            )
         return _grounded_price_unavailable_reply(product, remaining)
 
     monthly_debt = await _active_monthly_debt_total(user_id)
@@ -543,9 +614,27 @@ async def _grounded_product_affordability_reply(
     )
     text = await _try_gemini_reply(prompt, message, use_google_search=True)
     if not text:
+        estimated_quote = _estimated_market_quote(product)
+        if estimated_quote is not None:
+            return _build_affordability_reply(
+                product,
+                estimated_quote,
+                adjusted_remaining,
+                monthly_debt,
+                installment_count,
+            )
         return _grounded_price_unavailable_reply(product, adjusted_remaining)
     quote = _extract_json_object(text)
     if quote is None:
+        estimated_quote = _estimated_market_quote(product)
+        if estimated_quote is not None:
+            return _build_affordability_reply(
+                product,
+                estimated_quote,
+                adjusted_remaining,
+                monthly_debt,
+                installment_count,
+            )
         return _grounded_price_unavailable_reply(product, adjusted_remaining)
     return _build_affordability_reply(
         product,
