@@ -1,11 +1,11 @@
 {
-    "name": "budget_tracker",
-    "short_name": "budget_tracker",
+    "name": "Bütçe Takip",
+    "short_name": "Bütçe",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#031126",
+    "theme_color": "#031126",
+    "description": "AI destekli kişisel bütçe takip uygulaması.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

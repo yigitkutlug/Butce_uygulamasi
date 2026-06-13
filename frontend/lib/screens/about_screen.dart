@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../localization/app_localizer.dart';
 import '../state/app_controller.dart';
+import '../widgets/brand_mark.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key, required this.controller});
@@ -11,8 +12,6 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = (String key) => AppLocalizer.text(controller, key);
-    final scheme = Theme.of(context).colorScheme;
-
     return Scaffold(
       appBar: AppBar(title: Text(t('about'))),
       body: ListView(
@@ -26,14 +25,14 @@ class AboutScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      CircleAvatar(
-                        backgroundColor: scheme.primary.withValues(alpha: 0.16),
-                        child: Icon(Icons.pie_chart_rounded, color: scheme.primary),
-                      ),
+                      const BrandMark(size: 44, radius: 14),
                       const SizedBox(width: 10),
                       Text(
                         t('appTitle'),
-                        style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleLarge
+                            ?.copyWith(fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -52,10 +51,18 @@ class AboutScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  _FeatureRow(icon: Icons.smart_toy_rounded, text: 'AI kategori tahmini'),
-                  _FeatureRow(icon: Icons.bar_chart_rounded, text: 'Aylık özet ve trend takibi'),
-                  _FeatureRow(icon: Icons.currency_exchange_rounded, text: 'Canlı döviz dönüştürme'),
-                  _FeatureRow(icon: Icons.security_rounded, text: 'JWT tabanlı güvenli oturum'),
+                  _FeatureRow(
+                      icon: Icons.smart_toy_rounded,
+                      text: 'AI kategori tahmini'),
+                  _FeatureRow(
+                      icon: Icons.bar_chart_rounded,
+                      text: 'Aylık özet ve trend takibi'),
+                  _FeatureRow(
+                      icon: Icons.currency_exchange_rounded,
+                      text: 'Canlı döviz dönüştürme'),
+                  _FeatureRow(
+                      icon: Icons.security_rounded,
+                      text: 'JWT tabanlı güvenli oturum'),
                 ],
               ),
             ),
@@ -86,4 +93,3 @@ class _FeatureRow extends StatelessWidget {
     );
   }
 }
-

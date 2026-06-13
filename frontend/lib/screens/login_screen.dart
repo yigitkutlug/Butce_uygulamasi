@@ -4,6 +4,7 @@ import '../localization/app_localizer.dart';
 import '../services/token_storage.dart';
 import '../state/app_controller.dart';
 import '../utils/error_messages.dart';
+import '../widgets/brand_mark.dart';
 import 'consent_gate_screen.dart';
 import 'register_screen.dart';
 
@@ -112,16 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          Container(
-                            width: 58,
-                            height: 58,
-                            decoration: BoxDecoration(
-                              color: scheme.primary.withValues(alpha: 0.15),
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                            child: Icon(Icons.pie_chart_rounded,
-                                color: scheme.primary, size: 30),
-                          ),
+                          const BrandMark(size: 58, radius: 18),
                           const SizedBox(height: 16),
                           Text(
                             t('welcomeBack'),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../localization/app_localizer.dart';
 import '../state/app_controller.dart';
 import '../utils/error_messages.dart';
+import '../widgets/brand_mark.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key, required this.controller});
@@ -117,9 +118,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         children: [
                           Align(
                             alignment: Alignment.centerLeft,
-                            child: IconButton.filledTonal(
-                              onPressed: () => Navigator.of(context).pop(),
-                              icon: const Icon(Icons.arrow_back_rounded),
+                            child: Row(
+                              children: [
+                                IconButton.filledTonal(
+                                  onPressed: () => Navigator.of(context).pop(),
+                                  icon: const Icon(Icons.arrow_back_rounded),
+                                ),
+                                const SizedBox(width: 12),
+                                const BrandMark(size: 46, radius: 14),
+                              ],
                             ),
                           ),
                           const SizedBox(height: 8),

@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 import '../localization/app_localizer.dart';
 import '../screens/ai_metrics_screen.dart';
@@ -17,6 +17,7 @@ import '../screens/recurring_payments_screen.dart';
 import '../screens/settings_screen.dart';
 import '../screens/transactions_by_type_screen.dart';
 import '../state/app_controller.dart';
+import 'brand_mark.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key, required this.controller});
@@ -48,18 +49,17 @@ class AppDrawer extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  CircleAvatar(
-                    radius: 22,
-                    backgroundColor: scheme.primary.withValues(alpha: 0.16),
-                    child: Icon(Icons.pie_chart_rounded, color: scheme.primary),
-                  ),
+                  const BrandMark(size: 44, radius: 14),
                   const SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         t('menu'),
-                        style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleLarge
+                            ?.copyWith(fontWeight: FontWeight.w700),
                       ),
                       Text(
                         t('appTitle'),
@@ -84,7 +84,8 @@ class AppDrawer extends StatelessWidget {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => TransactionsByTypeScreen(controller: controller, showIncome: true),
+                    builder: (_) => TransactionsByTypeScreen(
+                        controller: controller, showIncome: true),
                   ),
                 );
               },
@@ -96,7 +97,8 @@ class AppDrawer extends StatelessWidget {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => TransactionsByTypeScreen(controller: controller, showIncome: false),
+                    builder: (_) => TransactionsByTypeScreen(
+                        controller: controller, showIncome: false),
                   ),
                 );
               },
@@ -107,7 +109,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => CategoriesScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => CategoriesScreen(controller: controller)),
                 );
               },
             ),
@@ -117,7 +120,9 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => BudgetLimitsScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) =>
+                          BudgetLimitsScreen(controller: controller)),
                 );
               },
             ),
@@ -127,7 +132,9 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => RecurringPaymentsScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) =>
+                          RecurringPaymentsScreen(controller: controller)),
                 );
               },
             ),
@@ -138,7 +145,9 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => MonthlyReportScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) =>
+                          MonthlyReportScreen(controller: controller)),
                 );
               },
             ),
@@ -148,7 +157,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => AiMetricsScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => AiMetricsScreen(controller: controller)),
                 );
               },
             ),
@@ -158,7 +168,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => CoachChatScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => CoachChatScreen(controller: controller)),
                 );
               },
             ),
@@ -168,7 +179,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => CoinsScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => CoinsScreen(controller: controller)),
                 );
               },
             ),
@@ -178,7 +190,9 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => InvestmentsScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) =>
+                          InvestmentsScreen(controller: controller)),
                 );
               },
             ),
@@ -188,7 +202,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => PortfolioScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => PortfolioScreen(controller: controller)),
                 );
               },
             ),
@@ -198,7 +213,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => AlertsScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => AlertsScreen(controller: controller)),
                 );
               },
             ),
@@ -208,7 +224,9 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => ExchangeRatesScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) =>
+                          ExchangeRatesScreen(controller: controller)),
                 );
               },
             ),
@@ -219,7 +237,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => ProfileScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => ProfileScreen(controller: controller)),
                 );
               },
             ),
@@ -229,7 +248,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => SettingsScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => SettingsScreen(controller: controller)),
                 );
               },
             ),
@@ -239,7 +259,8 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => AboutScreen(controller: controller)),
+                  MaterialPageRoute(
+                      builder: (_) => AboutScreen(controller: controller)),
                 );
               },
             ),
@@ -261,7 +282,10 @@ class _SectionTitle extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 10, 16, 6),
       child: Text(
         text,
-        style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.w700),
+        style: Theme.of(context)
+            .textTheme
+            .labelMedium
+            ?.copyWith(fontWeight: FontWeight.w700),
       ),
     );
   }
