@@ -4,6 +4,8 @@ from app.services.coach import (
     _find_amount,
     _find_expression_amount,
     _has_explicit_purchase_amount,
+    _affordability_status,
+    _build_affordability_reply,
     _is_finance_related,
     _is_installment_planning_prompt,
     _looks_like_product_research_prompt,
@@ -73,3 +75,46 @@ def test_installment_planning_prompt_detection():
         "40,000 tl lik alisveris yapcam kac taksite bolmem lazim butcem icin"
     )
     assert not _is_installment_planning_prompt("40000 tl telefon alirsam")
+
+
+def test_affordability_status_uses_safe_installment_limit():
+    assert _affordability_status(3100, 3000) == ("uygun değil", "danger")
+    assert _affordability_status(2600, 3000) == ("riskli", "warning")
+    assert _affordability_status(1500, 3000) == ("alınabilir", "safe")
+
+
+def test_product_affordability_reply_does_not_invent_unverified_price():
+    reply = _build_affordability_reply(
+        "iPhone",
+        {
+            "price_verified": False,
+            "alternatives": ["daha uygun telefon"],
+        },
+        remaining=10000,
+        monthly_debt=0,
+        installment_count=12,
+    )
+
+    assert "güncel fiyatı doğrulayamadım" in reply["reply"]
+    assert reply["risk_level"] == "info"
+
+
+def test_product_affordability_reply_marks_installment_above_limit_danger():
+    reply = _build_affordability_reply(
+        "iPhone",
+        {
+            "product_name": "iPhone",
+            "price_verified": True,
+            "price_min_try": 60000,
+            "price_max_try": 60000,
+            "alternatives": ["iPhone SE"],
+            "sources": ["Apple"],
+        },
+        remaining=10000,
+        monthly_debt=0,
+        installment_count=12,
+    )
+
+    assert "uygun değil" in reply["reply"]
+    assert "güvenli aylık taksit limitin 3000.00 TL" in reply["reply"]
+    assert reply["risk_level"] == "danger"

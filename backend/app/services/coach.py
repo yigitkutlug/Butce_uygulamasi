@@ -8,6 +8,7 @@ import urllib.parse
 import urllib.request
 
 from app.core.config import settings
+from app.db.mongo import get_db
 from app.services.analytics import get_summary
 
 logger = logging.getLogger(__name__)
@@ -39,6 +40,8 @@ _KNOWN_PRODUCT_WORDS = [
 
 _PRODUCT_RESEARCH_WORDS = [
     "almak",
+    "alabilir",
+    "alabilir miyim",
     "alicam",
     "alcam",
     "alacağım",
@@ -50,6 +53,8 @@ _PRODUCT_RESEARCH_WORDS = [
     "kac para",
     "ne kadar",
 ]
+
+_DEFAULT_INSTALLMENT_OPTIONS = [3, 6, 9, 12]
 
 _FINANCE_KEYWORDS = [
     "bütçe",
@@ -344,6 +349,211 @@ def _product_budget_question_reply(product: str, remaining: float | None) -> dic
         "remaining_budget": round(remaining, 2) if remaining is not None else None,
         "risk_level": "info",
     }
+
+
+def _build_grounded_product_price_prompt(product: str, user_message: str, budget_context: str) -> str:
+    return f"""
+Sen Türkçe konuşan bir bütçe analizi asistanısın.
+Google Search kullanarak ürünün Türkiye'deki güncel fiyatını doğrula.
+
+ÇOK ÖNEMLİ KURALLAR:
+- Fiyatı web sonucundan doğrulayamazsan price_verified=false yap.
+- Fiyat uydurma, tahmin etme, "genelde şu kadardır" deme.
+- Sadece JSON döndür, JSON dışında açıklama yazma.
+- Fiyat aralığı TRY cinsinden olmalı.
+- Alternatif ürünler daha uygun bütçeli seçenekler olmalı.
+- Finansal yatırım tavsiyesi verme; sadece satın alma bütçe analizi için veri hazırla.
+
+JSON ŞEMASI:
+{{
+  "product_name": "ürün adı",
+  "price_verified": true,
+  "price_min_try": 0,
+  "price_max_try": 0,
+  "price_note": "fiyatın hangi modele/kapasiteye göre değiştiği",
+  "alternatives": ["alternatif 1", "alternatif 2"],
+  "sources": ["kaynak adı 1", "kaynak adı 2"]
+}}
+
+Bütçe bağlamı:
+{budget_context}
+
+Kullanıcı mesajı:
+{user_message}
+
+Araştırılacak ürün:
+{product}
+"""
+
+
+def _extract_json_object(text: str) -> dict | None:
+    try:
+        parsed = json.loads(text)
+        return parsed if isinstance(parsed, dict) else None
+    except json.JSONDecodeError:
+        pass
+
+    match = re.search(r"\{.*\}", text, flags=re.DOTALL)
+    if not match:
+        return None
+    try:
+        parsed = json.loads(match.group(0))
+    except json.JSONDecodeError:
+        return None
+    return parsed if isinstance(parsed, dict) else None
+
+
+def _safe_float(value: object) -> float | None:
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        cleaned = value.replace(".", "").replace(",", ".")
+        return _to_float(cleaned)
+    return None
+
+
+async def _active_monthly_debt_total(user_id: str) -> float:
+    db = get_db()
+    total = 0.0
+    cursor = db.recurring_payments.find({"user_id": user_id, "is_active": True})
+    async for doc in cursor:
+        total += float(doc.get("amount", 0.0) or 0.0)
+    return total
+
+
+def _affordability_status(monthly_payment: float, safe_limit: float) -> tuple[str, str]:
+    if safe_limit <= 0:
+        return "uygun değil", "danger"
+    if monthly_payment > safe_limit:
+        return "uygun değil", "danger"
+    if monthly_payment >= safe_limit * 0.85:
+        return "riskli", "warning"
+    return "alınabilir", "safe"
+
+
+def _installment_lines(price: float, safe_limit: float, requested_count: int | None) -> list[str]:
+    options = [requested_count] if requested_count and requested_count > 1 else _DEFAULT_INSTALLMENT_OPTIONS
+    lines: list[str] = []
+    for count in options:
+        if count is None or count <= 1:
+            continue
+        monthly = price / count
+        status, _ = _affordability_status(monthly, safe_limit)
+        lines.append(f"{count} ay: aylık yaklaşık {monthly:.2f} TL ({status})")
+    return lines
+
+
+def _grounded_price_unavailable_reply(product: str, remaining: float | None) -> dict:
+    return {
+        "reply": (
+            f"{product} için güncel fiyatı doğrulayamadım; bu yüzden fiyat uydurup bütçe kararı vermiyorum. "
+            "Model/kapasiteyi daha net yazarsan tekrar arayabilirim. "
+            "Alternatif olarak aynı ihtiyacı daha düşük bütçeyle karşılayacak bir model seçmek mantıklı olabilir."
+        ),
+        "remaining_budget": round(remaining, 2) if remaining is not None else None,
+        "risk_level": "info",
+    }
+
+
+def _build_affordability_reply(
+    product: str,
+    quote: dict,
+    remaining: float | None,
+    monthly_debt: float,
+    installment_count: int | None,
+) -> dict:
+    verified = bool(quote.get("price_verified"))
+    min_price = _safe_float(quote.get("price_min_try"))
+    max_price = _safe_float(quote.get("price_max_try"))
+    if not verified or min_price is None or max_price is None or min_price <= 0 or max_price <= 0:
+        return _grounded_price_unavailable_reply(product, remaining)
+
+    price = max(min_price, max_price)
+    if remaining is None:
+        return {
+            "reply": (
+                f"{quote.get('product_name') or product} için güncel fiyatı yaklaşık "
+                f"{min_price:.0f}-{max_price:.0f} TL aralığında doğruladım; ancak aylık gelir hedefin olmadığı için "
+                "bütçe uygunluğunu net hesaplayamıyorum. Profilde aylık gelirini girersen kalan bütçenin %30'una göre "
+                "taksit analizi yapabilirim. Alternatif olarak daha düşük segment veya önceki nesil modellere bak."
+            ),
+            "remaining_budget": None,
+            "risk_level": "warning",
+        }
+
+    safe_limit = max(remaining * 0.30, 0.0)
+    requested_monthly = (
+        price / installment_count if installment_count is not None and installment_count > 1 else price / 12
+    )
+    status, risk_level = _affordability_status(requested_monthly, safe_limit)
+    installment_info = "; ".join(_installment_lines(price, safe_limit, installment_count))
+    alternatives = quote.get("alternatives") if isinstance(quote.get("alternatives"), list) else []
+    alternative_text = ", ".join(str(item) for item in alternatives[:2] if str(item).strip())
+    if not alternative_text:
+        alternative_text = "daha düşük segment veya önceki nesil bir model"
+    source_items = quote.get("sources") if isinstance(quote.get("sources"), list) else []
+    sources = ", ".join(str(item) for item in source_items[:2] if str(item).strip())
+    source_sentence = f" Kaynaklar: {sources}." if sources else ""
+
+    if installment_count is not None and installment_count > 1:
+        payment_sentence = (
+            f"{installment_count} ayda aylık yaklaşık {requested_monthly:.2f} TL eder."
+        )
+    else:
+        payment_sentence = (
+            "Taksit sayısı belirtmediğin için ana kararı 12 ay varsayımıyla hesapladım; "
+            f"12 ayda aylık yaklaşık {requested_monthly:.2f} TL eder. "
+            f"örnek taksitler: {installment_info}."
+        )
+
+    return {
+        "reply": (
+            f"{quote.get('product_name') or product} için güncel fiyatı yaklaşık "
+            f"{min_price:.0f}-{max_price:.0f} TL aralığında doğruladım. "
+            f"Kalan bütçen {remaining:.2f} TL, aktif aylık borç/ödeme yükün yaklaşık {monthly_debt:.2f} TL ve "
+            f"güvenli aylık taksit limitin {safe_limit:.2f} TL. "
+            f"{payment_sentence} Bu nedenle bu alışveriş bütçene göre {status}. "
+            f"Kısa gerekçe: aylık ödeme güvenli limitin {'üstünde' if risk_level == 'danger' else 'sınırına yakın' if risk_level == 'warning' else 'altında'}. "
+            f"Alternatif olarak {alternative_text} değerlendirilebilir."
+            f"{source_sentence}"
+        ),
+        "remaining_budget": round(remaining - requested_monthly, 2),
+        "risk_level": risk_level,
+    }
+
+
+async def _grounded_product_affordability_reply(
+    user_id: str,
+    product: str,
+    message: str,
+    summary: dict,
+    remaining: float | None,
+    budget_context: str,
+    installment_count: int | None,
+) -> dict:
+    if not settings.gemini_api_key:
+        return _grounded_price_unavailable_reply(product, remaining)
+
+    monthly_debt = await _active_monthly_debt_total(user_id)
+    adjusted_remaining = remaining - monthly_debt if remaining is not None else None
+    prompt = _build_grounded_product_price_prompt(
+        product,
+        message,
+        f"{budget_context}, active_monthly_debt_or_recurring_payment={monthly_debt:.2f}",
+    )
+    text = await _try_gemini_reply(prompt, message, use_google_search=True)
+    if not text:
+        return _grounded_price_unavailable_reply(product, adjusted_remaining)
+    quote = _extract_json_object(text)
+    if quote is None:
+        return _grounded_price_unavailable_reply(product, adjusted_remaining)
+    return _build_affordability_reply(
+        product,
+        quote,
+        adjusted_remaining,
+        monthly_debt,
+        installment_count,
+    )
 
 
 def _build_product_research_prompt(user_message: str, budget_context: str) -> str:
@@ -859,47 +1069,29 @@ async def coach_reply(user_id: str, message: str) -> dict:
         if product_label:
             _LAST_PRODUCT_BY_USER[user_id] = product_label
 
-        if not current_price_requested:
-            return _product_budget_question_reply(product_label or "Bu ürün", remaining)
-
-        if not settings.gemini_api_key:
-            return _product_research_unavailable_reply(message, remaining)
-
-        product_prompt = _build_product_research_prompt(message, context_text)
-        researched_text = await _try_gemini_reply(
-            product_prompt,
+        return await _grounded_product_affordability_reply(
+            user_id,
+            product_label or "Bu ürün",
             message,
-            True,
+            summary,
+            remaining,
+            context_text,
+            installment_count,
         )
-        if researched_text:
-            return {
-                "reply": researched_text,
-                "remaining_budget": round(remaining, 2) if remaining is not None else None,
-                "risk_level": "info",
-            }
-        return _product_research_unavailable_reply(message, remaining)
 
     recommendation_product = product_label if product_research_requested else remembered_product
     if recommendation_product and detected_amount is not None and has_explicit_amount:
         _LAST_PRODUCT_BY_USER[user_id] = recommendation_product
-        if settings.gemini_api_key:
-            recommendation_prompt = _build_product_recommendation_prompt(
+        if _contains_known_product(recommendation_product):
+            return await _grounded_product_affordability_reply(
+                user_id,
                 recommendation_product,
-                detected_amount,
                 message,
+                summary,
+                remaining,
                 context_text,
+                installment_count,
             )
-            recommendation_text = await _try_gemini_reply(
-                recommendation_prompt,
-                message,
-                True,
-            )
-            if recommendation_text:
-                return {
-                    "reply": recommendation_text,
-                    "remaining_budget": round(remaining, 2) if remaining is not None else None,
-                    "risk_level": "info",
-                }
         return _product_recommendation_fallback(
             recommendation_product,
             detected_amount,
