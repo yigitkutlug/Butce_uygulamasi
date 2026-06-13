@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: budget-tracker-api
+    env: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r ./requirements.txt
+    startCommand: uvicorn app.main:app --app-dir . --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_SERVER_SELECTION_TIMEOUT_MS
+        value: "5000"
+      - key: MONGO_APP_NAME
+        value: "ai-budget-tracker"
+      - key: JWT_SECRET
+        sync: false
+      - key: CORS_ALLOW_ORIGINS
+        sync: false

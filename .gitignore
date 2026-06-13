@@ -1,0 +1,25 @@
+# Env
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Python
+backend/.venv/
+**/__pycache__/
+*.pyc
+backend/*.log
+
+# Flutter / Dart
+frontend/.dart_tool/
+frontend/build/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+Thumbs.db
+.DS_Store
