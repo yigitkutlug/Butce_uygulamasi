@@ -1000,3 +1000,421 @@ d?zenli sigorta ?demesi geliri,Other Income
 tek seferlik sigorta ?demesi,Other Income
 tek seferlik sigorta ?demesi geliri,Other Income
 ek olarak sigorta ?demesi,Other Income
+Migros s?t ekmek ald?m,Market
+Migros sebze meyve ald?m,Market
+Migros temizlik ?r?n? ald?m,Market
+Migros haftal?k al??veri? ald?m,Market
+Migros kahvalt?l?k ald?m,Market
+Migros et tavuk ald?m,Market
+Migros bakliyat ald?m,Market
+Migros at??t?rmal?k ald?m,Market
+Migros ev ihtiya?lar? ald?m,Market
+Migros g?da al??veri?i ald?m,Market
+Migros deterjan,Market
+Migros i?in deterjan ?demesi,Market
+Migros deterjan masraf?,Market
+Migros deterjan ald?m,Market
+Migros bebek ?r?n?,Market
+Migros i?in bebek ?r?n? ?demesi,Market
+Migros bebek ?r?n? masraf?,Market
+Migros bebek ?r?n? ald?m,Market
+Migros ki?isel bak?m,Market
+Migros i?in ki?isel bak?m ?demesi,Market
+Migros ki?isel bak?m masraf?,Market
+Migros ki?isel bak?m ald?m,Market
+Migros su ve i?ecek,Market
+Migros i?in su ve i?ecek ?demesi,Market
+Migros su ve i?ecek masraf?,Market
+Migros su ve i?ecek ald?m,Market
+Migros donuk g?da,Market
+Migros i?in donuk g?da ?demesi,Market
+Migros donuk g?da masraf?,Market
+Migros donuk g?da ald?m,Market
+Bim s?t ekmek ald?m,Market
+Bim sebze meyve ald?m,Market
+Bim temizlik ?r?n? ald?m,Market
+Bim haftal?k al??veri? ald?m,Market
+Bim kahvalt?l?k ald?m,Market
+Bim et tavuk ald?m,Market
+Bim bakliyat ald?m,Market
+Bim at??t?rmal?k ald?m,Market
+Yemeksepeti ??le yeme?i ald?m,Food
+Yemeksepeti ak?am yeme?i ald?m,Food
+Yemeksepeti kahve ald?m,Food
+Yemeksepeti pizza ald?m,Food
+Yemeksepeti hamburger ald?m,Food
+Yemeksepeti d?ner ald?m,Food
+Yemeksepeti lahmacun ald?m,Food
+Yemeksepeti tatl? ald?m,Food
+Yemeksepeti men? ald?m,Food
+Yemeksepeti yemek sipari?i ald?m,Food
+Yemeksepeti ?orba,Food
+Yemeksepeti i?in ?orba ?demesi,Food
+Yemeksepeti ?orba masraf?,Food
+Yemeksepeti ?orba ald?m,Food
+Yemeksepeti sandvi?,Food
+Yemeksepeti i?in sandvi? ?demesi,Food
+Yemeksepeti sandvi? masraf?,Food
+Yemeksepeti sandvi? ald?m,Food
+Yemeksepeti pasta,Food
+Yemeksepeti i?in pasta ?demesi,Food
+Yemeksepeti pasta masraf?,Food
+Yemeksepeti pasta ald?m,Food
+Yemeksepeti kahvalt?,Food
+Yemeksepeti i?in kahvalt? ?demesi,Food
+Yemeksepeti kahvalt? masraf?,Food
+Yemeksepeti kahvalt? ald?m,Food
+Yemeksepeti d?r?m,Food
+Yemeksepeti i?in d?r?m ?demesi,Food
+Yemeksepeti d?r?m masraf?,Food
+Yemeksepeti d?r?m ald?m,Food
+GetirYemek ??le yeme?i ald?m,Food
+GetirYemek ak?am yeme?i ald?m,Food
+GetirYemek kahve ald?m,Food
+GetirYemek pizza ald?m,Food
+GetirYemek hamburger ald?m,Food
+GetirYemek d?ner ald?m,Food
+GetirYemek lahmacun ald?m,Food
+GetirYemek tatl? ald?m,Food
+?stanbulkart kart dolumu ald?m,Transport
+?stanbulkart bilet ald?m,Transport
+?stanbulkart ula??m ?creti ald?m,Transport
+?stanbulkart yak?t ald?m,Transport
+?stanbulkart park ?creti ald?m,Transport
+?stanbulkart abonman ald?m,Transport
+?stanbulkart aktarma ald?m,Transport
+?stanbulkart taksi yolculu?u ald?m,Transport
+?stanbulkart servis ?creti ald?m,Transport
+?stanbulkart yol masraf? ald?m,Transport
+?stanbulkart HGS y?kleme,Transport
+?stanbulkart i?in HGS y?kleme ?demesi,Transport
+?stanbulkart HGS y?kleme masraf?,Transport
+?stanbulkart HGS y?kleme ald?m,Transport
+?stanbulkart ara? bak?m masraf?,Transport
+?stanbulkart i?in ara? bak?m masraf? ?demesi,Transport
+?stanbulkart ara? bak?m masraf? masraf?,Transport
+?stanbulkart ara? bak?m masraf? ald?m,Transport
+?stanbulkart lastik ?creti,Transport
+?stanbulkart i?in lastik ?creti ?demesi,Transport
+?stanbulkart lastik ?creti masraf?,Transport
+?stanbulkart lastik ?creti ald?m,Transport
+?stanbulkart vapur bileti,Transport
+?stanbulkart i?in vapur bileti ?demesi,Transport
+?stanbulkart vapur bileti masraf?,Transport
+?stanbulkart vapur bileti ald?m,Transport
+?stanbulkart tren bileti,Transport
+?stanbulkart i?in tren bileti ?demesi,Transport
+?stanbulkart tren bileti masraf?,Transport
+?stanbulkart tren bileti ald?m,Transport
+metro kart dolumu ald?m,Transport
+metro bilet ald?m,Transport
+metro ula??m ?creti ald?m,Transport
+metro yak?t ald?m,Transport
+metro park ?creti ald?m,Transport
+metro abonman ald?m,Transport
+metro aktarma ald?m,Transport
+metro taksi yolculu?u ald?m,Transport
+maa? banka hesab?na ge?ti,Salary
+maa? nakit al?nd?,Salary
+maa? hesaba aktar?ld?,Salary
+bug?n maa? ?demesi,Salary
+bu ay maa? ?demesi,Salary
+online maa? ?demesi,Salary
+banka hesab?ma maa? ?demesi,Salary
+nakit olarak maa? ?demesi,Salary
+d?zenli maa? ?demesi,Salary
+tek seferlik maa? ?demesi,Salary
+ek olarak maa? ?demesi,Salary
+ay sonunda maa?,Salary
+ay sonunda maa? geliri,Salary
+ay sonunda maa? ?demesi,Salary
+hafta i?inde maa?,Salary
+hafta i?inde maa? geliri,Salary
+hafta i?inde maa? ?demesi,Salary
+planl? maa?,Salary
+planl? maa? geliri,Salary
+planl? maa? ?demesi,Salary
+bordro banka hesab?na ge?ti,Salary
+bordro nakit al?nd?,Salary
+bordro hesaba aktar?ld?,Salary
+bug?n bordro ?demesi,Salary
+bu ay bordro ?demesi,Salary
+online bordro ?demesi,Salary
+banka hesab?ma bordro ?demesi,Salary
+nakit olarak bordro ?demesi,Salary
+d?zenli bordro ?demesi,Salary
+tek seferlik bordro ?demesi,Salary
+ek olarak bordro ?demesi,Salary
+ay sonunda bordro,Salary
+ay sonunda bordro geliri,Salary
+ay sonunda bordro ?demesi,Salary
+hafta i?inde bordro,Salary
+hafta i?inde bordro geliri,Salary
+hafta i?inde bordro ?demesi,Salary
+planl? bordro,Salary
+prim banka hesab?na ge?ti,Additional Income
+prim nakit al?nd?,Additional Income
+prim hesaba aktar?ld?,Additional Income
+bug?n prim ?demesi,Additional Income
+bu ay prim ?demesi,Additional Income
+online prim ?demesi,Additional Income
+banka hesab?ma prim ?demesi,Additional Income
+nakit olarak prim ?demesi,Additional Income
+d?zenli prim ?demesi,Additional Income
+tek seferlik prim ?demesi,Additional Income
+ek olarak prim ?demesi,Additional Income
+ay sonunda prim,Additional Income
+ay sonunda prim geliri,Additional Income
+ay sonunda prim ?demesi,Additional Income
+hafta i?inde prim,Additional Income
+hafta i?inde prim geliri,Additional Income
+hafta i?inde prim ?demesi,Additional Income
+planl? prim,Additional Income
+planl? prim geliri,Additional Income
+planl? prim ?demesi,Additional Income
+bonus banka hesab?na ge?ti,Additional Income
+bonus nakit al?nd?,Additional Income
+bonus hesaba aktar?ld?,Additional Income
+bug?n bonus ?demesi,Additional Income
+bu ay bonus ?demesi,Additional Income
+online bonus ?demesi,Additional Income
+banka hesab?ma bonus ?demesi,Additional Income
+nakit olarak bonus ?demesi,Additional Income
+d?zenli bonus ?demesi,Additional Income
+tek seferlik bonus ?demesi,Additional Income
+ek olarak bonus ?demesi,Additional Income
+ay sonunda bonus,Additional Income
+ay sonunda bonus geliri,Additional Income
+ay sonunda bonus ?demesi,Additional Income
+hafta i?inde bonus,Additional Income
+hafta i?inde bonus geliri,Additional Income
+hafta i?inde bonus ?demesi,Additional Income
+planl? bonus,Additional Income
+KYK bursu banka hesab?na ge?ti,Scholarship
+KYK bursu nakit al?nd?,Scholarship
+KYK bursu hesaba aktar?ld?,Scholarship
+bug?n KYK bursu ?demesi,Scholarship
+bu ay KYK bursu ?demesi,Scholarship
+online KYK bursu ?demesi,Scholarship
+banka hesab?ma KYK bursu ?demesi,Scholarship
+nakit olarak KYK bursu ?demesi,Scholarship
+d?zenli KYK bursu ?demesi,Scholarship
+tek seferlik KYK bursu ?demesi,Scholarship
+ek olarak KYK bursu ?demesi,Scholarship
+ay sonunda KYK bursu,Scholarship
+ay sonunda KYK bursu geliri,Scholarship
+ay sonunda KYK bursu ?demesi,Scholarship
+hafta i?inde KYK bursu,Scholarship
+hafta i?inde KYK bursu geliri,Scholarship
+hafta i?inde KYK bursu ?demesi,Scholarship
+planl? KYK bursu,Scholarship
+planl? KYK bursu geliri,Scholarship
+planl? KYK bursu ?demesi,Scholarship
+?niversite bursu banka hesab?na ge?ti,Scholarship
+?niversite bursu nakit al?nd?,Scholarship
+?niversite bursu hesaba aktar?ld?,Scholarship
+bug?n ?niversite bursu ?demesi,Scholarship
+bu ay ?niversite bursu ?demesi,Scholarship
+online ?niversite bursu ?demesi,Scholarship
+banka hesab?ma ?niversite bursu ?demesi,Scholarship
+nakit olarak ?niversite bursu ?demesi,Scholarship
+d?zenli ?niversite bursu ?demesi,Scholarship
+tek seferlik ?niversite bursu ?demesi,Scholarship
+ek olarak ?niversite bursu ?demesi,Scholarship
+ay sonunda ?niversite bursu,Scholarship
+ay sonunda ?niversite bursu geliri,Scholarship
+ay sonunda ?niversite bursu ?demesi,Scholarship
+hafta i?inde ?niversite bursu,Scholarship
+hafta i?inde ?niversite bursu geliri,Scholarship
+hafta i?inde ?niversite bursu ?demesi,Scholarship
+planl? ?niversite bursu,Scholarship
+freelance yaz?l?m banka hesab?na ge?ti,Freelance
+freelance yaz?l?m nakit al?nd?,Freelance
+freelance yaz?l?m hesaba aktar?ld?,Freelance
+bug?n freelance yaz?l?m ?demesi,Freelance
+bu ay freelance yaz?l?m ?demesi,Freelance
+online freelance yaz?l?m ?demesi,Freelance
+banka hesab?ma freelance yaz?l?m ?demesi,Freelance
+nakit olarak freelance yaz?l?m ?demesi,Freelance
+d?zenli freelance yaz?l?m ?demesi,Freelance
+tek seferlik freelance yaz?l?m ?demesi,Freelance
+ek olarak freelance yaz?l?m ?demesi,Freelance
+ay sonunda freelance yaz?l?m,Freelance
+ay sonunda freelance yaz?l?m geliri,Freelance
+ay sonunda freelance yaz?l?m ?demesi,Freelance
+hafta i?inde freelance yaz?l?m,Freelance
+hafta i?inde freelance yaz?l?m geliri,Freelance
+hafta i?inde freelance yaz?l?m ?demesi,Freelance
+planl? freelance yaz?l?m,Freelance
+planl? freelance yaz?l?m geliri,Freelance
+planl? freelance yaz?l?m ?demesi,Freelance
+tasar?m i?i banka hesab?na ge?ti,Freelance
+tasar?m i?i nakit al?nd?,Freelance
+tasar?m i?i hesaba aktar?ld?,Freelance
+bug?n tasar?m i?i ?demesi,Freelance
+bu ay tasar?m i?i ?demesi,Freelance
+online tasar?m i?i ?demesi,Freelance
+banka hesab?ma tasar?m i?i ?demesi,Freelance
+nakit olarak tasar?m i?i ?demesi,Freelance
+d?zenli tasar?m i?i ?demesi,Freelance
+tek seferlik tasar?m i?i ?demesi,Freelance
+ek olarak tasar?m i?i ?demesi,Freelance
+ay sonunda tasar?m i?i,Freelance
+ay sonunda tasar?m i?i geliri,Freelance
+ay sonunda tasar?m i?i ?demesi,Freelance
+hafta i?inde tasar?m i?i,Freelance
+hafta i?inde tasar?m i?i geliri,Freelance
+hafta i?inde tasar?m i?i ?demesi,Freelance
+planl? tasar?m i?i,Freelance
+hisse getirisi banka hesab?na ge?ti,Investment
+hisse getirisi nakit al?nd?,Investment
+hisse getirisi hesaba aktar?ld?,Investment
+bug?n hisse getirisi ?demesi,Investment
+bu ay hisse getirisi ?demesi,Investment
+online hisse getirisi ?demesi,Investment
+banka hesab?ma hisse getirisi ?demesi,Investment
+nakit olarak hisse getirisi ?demesi,Investment
+d?zenli hisse getirisi ?demesi,Investment
+tek seferlik hisse getirisi ?demesi,Investment
+ek olarak hisse getirisi ?demesi,Investment
+ay sonunda hisse getirisi,Investment
+ay sonunda hisse getirisi geliri,Investment
+ay sonunda hisse getirisi ?demesi,Investment
+hafta i?inde hisse getirisi,Investment
+hafta i?inde hisse getirisi geliri,Investment
+hafta i?inde hisse getirisi ?demesi,Investment
+planl? hisse getirisi,Investment
+planl? hisse getirisi geliri,Investment
+planl? hisse getirisi ?demesi,Investment
+fon kazanc? banka hesab?na ge?ti,Investment
+fon kazanc? nakit al?nd?,Investment
+fon kazanc? hesaba aktar?ld?,Investment
+bug?n fon kazanc? ?demesi,Investment
+bu ay fon kazanc? ?demesi,Investment
+online fon kazanc? ?demesi,Investment
+banka hesab?ma fon kazanc? ?demesi,Investment
+nakit olarak fon kazanc? ?demesi,Investment
+d?zenli fon kazanc? ?demesi,Investment
+tek seferlik fon kazanc? ?demesi,Investment
+ek olarak fon kazanc? ?demesi,Investment
+ay sonunda fon kazanc?,Investment
+ay sonunda fon kazanc? geliri,Investment
+ay sonunda fon kazanc? ?demesi,Investment
+hafta i?inde fon kazanc?,Investment
+hafta i?inde fon kazanc? geliri,Investment
+hafta i?inde fon kazanc? ?demesi,Investment
+planl? fon kazanc?,Investment
+ev kiras? banka hesab?na ge?ti,Rental Income
+ev kiras? nakit al?nd?,Rental Income
+ev kiras? hesaba aktar?ld?,Rental Income
+bug?n ev kiras? ?demesi,Rental Income
+bu ay ev kiras? ?demesi,Rental Income
+online ev kiras? ?demesi,Rental Income
+banka hesab?ma ev kiras? ?demesi,Rental Income
+nakit olarak ev kiras? ?demesi,Rental Income
+d?zenli ev kiras? ?demesi,Rental Income
+tek seferlik ev kiras? ?demesi,Rental Income
+ek olarak ev kiras? ?demesi,Rental Income
+ay sonunda ev kiras?,Rental Income
+ay sonunda ev kiras? geliri,Rental Income
+ay sonunda ev kiras? ?demesi,Rental Income
+hafta i?inde ev kiras?,Rental Income
+hafta i?inde ev kiras? geliri,Rental Income
+hafta i?inde ev kiras? ?demesi,Rental Income
+planl? ev kiras?,Rental Income
+planl? ev kiras? geliri,Rental Income
+planl? ev kiras? ?demesi,Rental Income
+d?kkan kiras? banka hesab?na ge?ti,Rental Income
+d?kkan kiras? nakit al?nd?,Rental Income
+d?kkan kiras? hesaba aktar?ld?,Rental Income
+bug?n d?kkan kiras? ?demesi,Rental Income
+bu ay d?kkan kiras? ?demesi,Rental Income
+online d?kkan kiras? ?demesi,Rental Income
+banka hesab?ma d?kkan kiras? ?demesi,Rental Income
+nakit olarak d?kkan kiras? ?demesi,Rental Income
+d?zenli d?kkan kiras? ?demesi,Rental Income
+tek seferlik d?kkan kiras? ?demesi,Rental Income
+ek olarak d?kkan kiras? ?demesi,Rental Income
+ay sonunda d?kkan kiras?,Rental Income
+ay sonunda d?kkan kiras? geliri,Rental Income
+ay sonunda d?kkan kiras? ?demesi,Rental Income
+hafta i?inde d?kkan kiras?,Rental Income
+hafta i?inde d?kkan kiras? geliri,Rental Income
+hafta i?inde d?kkan kiras? ?demesi,Rental Income
+planl? d?kkan kiras?,Rental Income
+hediye para banka hesab?na ge?ti,Gift
+hediye para nakit al?nd?,Gift
+hediye para hesaba aktar?ld?,Gift
+bug?n hediye para ?demesi,Gift
+bu ay hediye para ?demesi,Gift
+online hediye para ?demesi,Gift
+banka hesab?ma hediye para ?demesi,Gift
+nakit olarak hediye para ?demesi,Gift
+d?zenli hediye para ?demesi,Gift
+tek seferlik hediye para ?demesi,Gift
+ek olarak hediye para ?demesi,Gift
+ay sonunda hediye para,Gift
+ay sonunda hediye para geliri,Gift
+ay sonunda hediye para ?demesi,Gift
+hafta i?inde hediye para,Gift
+hafta i?inde hediye para geliri,Gift
+hafta i?inde hediye para ?demesi,Gift
+planl? hediye para,Gift
+planl? hediye para geliri,Gift
+planl? hediye para ?demesi,Gift
+bayram har?l??? banka hesab?na ge?ti,Gift
+bayram har?l??? nakit al?nd?,Gift
+bayram har?l??? hesaba aktar?ld?,Gift
+bug?n bayram har?l??? ?demesi,Gift
+bu ay bayram har?l??? ?demesi,Gift
+online bayram har?l??? ?demesi,Gift
+banka hesab?ma bayram har?l??? ?demesi,Gift
+nakit olarak bayram har?l??? ?demesi,Gift
+d?zenli bayram har?l??? ?demesi,Gift
+tek seferlik bayram har?l??? ?demesi,Gift
+ek olarak bayram har?l??? ?demesi,Gift
+ay sonunda bayram har?l???,Gift
+ay sonunda bayram har?l??? geliri,Gift
+ay sonunda bayram har?l??? ?demesi,Gift
+hafta i?inde bayram har?l???,Gift
+hafta i?inde bayram har?l??? geliri,Gift
+hafta i?inde bayram har?l??? ?demesi,Gift
+planl? bayram har?l???,Gift
+para iadesi banka hesab?na ge?ti,Other Income
+para iadesi nakit al?nd?,Other Income
+para iadesi hesaba aktar?ld?,Other Income
+bug?n para iadesi ?demesi,Other Income
+bu ay para iadesi ?demesi,Other Income
+online para iadesi ?demesi,Other Income
+banka hesab?ma para iadesi ?demesi,Other Income
+nakit olarak para iadesi ?demesi,Other Income
+d?zenli para iadesi ?demesi,Other Income
+tek seferlik para iadesi ?demesi,Other Income
+ek olarak para iadesi ?demesi,Other Income
+ay sonunda para iadesi,Other Income
+ay sonunda para iadesi geliri,Other Income
+ay sonunda para iadesi ?demesi,Other Income
+hafta i?inde para iadesi,Other Income
+hafta i?inde para iadesi geliri,Other Income
+hafta i?inde para iadesi ?demesi,Other Income
+planl? para iadesi,Other Income
+planl? para iadesi geliri,Other Income
+planl? para iadesi ?demesi,Other Income
+masraf iadesi banka hesab?na ge?ti,Other Income
+masraf iadesi nakit al?nd?,Other Income
+masraf iadesi hesaba aktar?ld?,Other Income
+bug?n masraf iadesi ?demesi,Other Income
+bu ay masraf iadesi ?demesi,Other Income
+online masraf iadesi ?demesi,Other Income
+banka hesab?ma masraf iadesi ?demesi,Other Income
+nakit olarak masraf iadesi ?demesi,Other Income
+d?zenli masraf iadesi ?demesi,Other Income
+tek seferlik masraf iadesi ?demesi,Other Income
+ek olarak masraf iadesi ?demesi,Other Income
+ay sonunda masraf iadesi,Other Income
+ay sonunda masraf iadesi geliri,Other Income
+ay sonunda masraf iadesi ?demesi,Other Income
+hafta i?inde masraf iadesi,Other Income
+hafta i?inde masraf iadesi geliri,Other Income
+hafta i?inde masraf iadesi ?demesi,Other Income
+planl? masraf iadesi,Other Income
