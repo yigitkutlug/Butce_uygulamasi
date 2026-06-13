@@ -92,8 +92,10 @@ class _BudgetAppState extends State<BudgetApp> {
               margin: EdgeInsets.zero,
             ),
             inputDecorationTheme: const InputDecorationTheme(
-              contentPadding:
-                  EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 14,
+                vertical: 14,
+              ),
             ),
           ),
           darkTheme: ThemeData(
@@ -105,8 +107,10 @@ class _BudgetAppState extends State<BudgetApp> {
               margin: EdgeInsets.zero,
             ),
             inputDecorationTheme: const InputDecorationTheme(
-              contentPadding:
-                  EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 14,
+                vertical: 14,
+              ),
             ),
           ),
           home: !_controller.ready
@@ -118,12 +122,15 @@ class _BudgetAppState extends State<BudgetApp> {
                     // login ekranı gösterilir.
                     if (snapshot.connectionState != ConnectionState.done) {
                       return const Scaffold(
-                          body: Center(child: CircularProgressIndicator()));
+                        body: Center(child: CircularProgressIndicator()),
+                      );
                     }
                     final token = snapshot.data;
                     if (token != null) {
                       return ConsentGateScreen(
-                          controller: _controller, token: token);
+                        controller: _controller,
+                        token: token,
+                      );
                     }
                     return LoginScreen(controller: _controller);
                   },

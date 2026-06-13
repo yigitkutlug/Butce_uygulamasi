@@ -99,7 +99,8 @@ class BackgroundAlertService {
     await _notifications.initialize(settings);
     await _notifications
         .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>()
+          AndroidFlutterLocalNotificationsPlugin
+        >()
         ?.requestNotificationsPermission();
     _initialized = true;
   }
@@ -118,8 +119,8 @@ class BackgroundAlertService {
         for (final raw in events) {
           if (raw is! Map<String, dynamic>) continue;
           final id = (raw['id'] ?? '').toString();
-          final message =
-              (raw['message'] ?? 'Fiyat alarmın tetiklendi.').toString();
+          final message = (raw['message'] ?? 'Fiyat alarmın tetiklendi.')
+              .toString();
           final symbol = (raw['symbol'] ?? 'Piyasa').toString();
 
           await _showNotification(
@@ -147,10 +148,8 @@ class BackgroundAlertService {
     final prefs = await SharedPreferences.getInstance();
     // Bu ayar arka plan servisinden de okunur; böylece kullanıcı kapattığında
     // uygulama açık olmasa bile bütçe hatırlatıcısı gönderilmez.
-    final enabled = prefs.getBool(
-          SettingsStorage.financialRemindersEnabledKey,
-        ) ??
-        true;
+    final enabled =
+        prefs.getBool(SettingsStorage.financialRemindersEnabledKey) ?? true;
     if (!enabled) return;
 
     final now = DateTime.now();
@@ -182,14 +181,16 @@ class BackgroundAlertService {
     final budgetAlerts = (summary['budget_alerts'] as List<dynamic>? ?? [])
         .whereType<Map<String, dynamic>>()
         .toList();
-    final dangerAlerts =
-        budgetAlerts.where((item) => item['level'] == 'danger').toList();
-    final warningAlerts =
-        budgetAlerts.where((item) => item['level'] == 'warning').toList();
-    final monthlyTarget =
-        (summary['monthly_income_target'] as num? ?? 0).toDouble();
-    final currentExpense =
-        (summary['current_month_expense'] as num? ?? 0).toDouble();
+    final dangerAlerts = budgetAlerts
+        .where((item) => item['level'] == 'danger')
+        .toList();
+    final warningAlerts = budgetAlerts
+        .where((item) => item['level'] == 'warning')
+        .toList();
+    final monthlyTarget = (summary['monthly_income_target'] as num? ?? 0)
+        .toDouble();
+    final currentExpense = (summary['current_month_expense'] as num? ?? 0)
+        .toDouble();
 
     if (dangerAlerts.isNotEmpty) {
       final first = dangerAlerts.first;
@@ -268,10 +269,7 @@ class BackgroundAlertService {
 }
 
 class _FinancialReminder {
-  const _FinancialReminder({
-    required this.title,
-    required this.body,
-  });
+  const _FinancialReminder({required this.title, required this.body});
 
   final String title;
   final String body;
