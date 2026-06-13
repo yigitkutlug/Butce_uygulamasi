@@ -67,13 +67,37 @@ class ApiService {
           return detail;
         }
         if (detail is List && detail.isNotEmpty) {
-          return 'Girdiğin bilgileri kontrol edip tekrar dene.';
+          return _validationMessage(detail);
         }
       }
     } catch (_) {
       // Keep the generic message when body is not JSON.
     }
     return '';
+  }
+
+  String _validationMessage(List<dynamic> errors) {
+    for (final error in errors) {
+      if (error is! Map<String, dynamic>) continue;
+
+      final loc = error['loc'];
+      final field = loc is List && loc.isNotEmpty ? loc.last.toString() : '';
+      final type = error['type']?.toString() ?? '';
+      final message = error['msg']?.toString().toLowerCase() ?? '';
+
+      if (field == 'email') {
+        return 'Geçerli bir e-posta adresi gir.';
+      }
+      if (field == 'password' &&
+          (type.contains('too_short') || message.contains('at least'))) {
+        return 'Şifre en az 6 karakter olmalı.';
+      }
+      if (field == 'monthly_income') {
+        return 'Aylık gelir 0’dan büyük olmalı.';
+      }
+    }
+
+    return 'Kayıt bilgilerini kontrol edip tekrar dene.';
   }
 
   String _translateDetail(String detail, String fallback) {
