@@ -1,231 +1,1002 @@
-﻿"text","category"
-"Migros alışverişi","Market"
-"Migros'tan gıda aldım","Market"
-"Bim market alışverişi","Market"
-"Bimden alışveriş yaptım","Market"
-"A101 alışveriş","Market"
-"A101 marketten alışveriş","Market"
-"Şok market alışverişi","Market"
-"Carrefour alışverişi","Market"
-"CarrefourSA market","Market"
-"Kasaptan et aldım","Market"
-"Manavdan sebze aldım","Market"
-"Sebze meyve alışverişi","Market"
-"Ev için gıda aldım","Market"
-"Market harcaması","Market"
-"Kahvaltılık aldım","Market"
-"Süt ve ekmek aldım","Market"
-"Atıştırmalık aldım","Market"
-"Gıda alışverişi","Market"
-"Market fişi","Market"
-"Market masrafı","Market"
-"Migrosa gittim","Market"
-"Bime uğradım","Market"
-"A101den bir şeyler aldım","Market"
-"Şoktan alışveriş","Market"
-"Carrefourdan alışveriş","Market"
-"Kasap alışverişi","Market"
-"Manav alışverişi","Market"
-"Ev alışverişi","Market"
-"Günlük market masrafı","Market"
-"Haftalık alışveriş","Market"
-"Lahmacun yedim","Food"
-"Lahmacun siparişi","Food"
-"Döner yedim","Food"
-"Döner siparişi","Food"
-"Pizza söyledim","Food"
-"Pizza siparişi","Food"
-"Hamburger yedim","Food"
-"Hamburger menü","Food"
-"Restoranda yemek","Food"
-"Kafede yemek","Food"
-"Fast food yedim","Food"
-"Yemek siparişi","Food"
-"Akşam yemeği","Food"
-"Öğle yemeği","Food"
-"Kahvaltı yaptım","Food"
-"Evden yemek söyledim","Food"
-"Yemek masrafı","Food"
-"Yemek harcaması","Food"
-"Dışarıda yemek","Food"
-"Lokantada yemek","Food"
-"Otobüs bileti","Transport"
-"Metro bileti","Transport"
-"Metro kart dolumu","Transport"
-"Taksi ücreti","Transport"
-"Minibüs parası","Transport"
-"Dolmuş parası","Transport"
-"Tramvay bileti","Transport"
-"Ulaşım harcaması","Transport"
-"Ulaşım masrafı","Transport"
-"Otobüs kartı dolum","Transport"
-"Akbil doldurdum","Transport"
-"İstanbulkart dolumu","Transport"
-"Benzin aldım","Transport"
-"Mazot aldım","Transport"
-"Akaryakıt harcaması","Transport"
-"Araç yakıt gideri","Transport"
-"Otopark ücreti","Transport"
-"Araba park parası","Transport"
-"Uçak bileti","Transport"
-"Uçuş bileti","Transport"
-"Aylik maas yatti","Salary"
-"Maasim hesaba gecti","Salary"
-"Sirket maasi odedi","Salary"
-"Bordro maasi geldi","Salary"
-"Ek gelir elde ettim","Additional Income"
-"Yan isten para geldi","Additional Income"
-"Part time ucreti yatti","Additional Income"
-"Ek odeme aldim","Additional Income"
-"Burs yatti","Scholarship"
-"Egitim bursu geldi","Scholarship"
-"KYK bursu aldim","Scholarship"
-"Ogrenim bursu hesaba gecti","Scholarship"
-"Freelance proje odemesi geldi","Freelance"
-"Serbest is ucreti aldim","Freelance"
-"Freelance tasarim odemesi","Freelance"
-"Danismanlik ucreti geldi","Freelance"
-"Yatirimdan kar ettim","Investment"
-"Hisse getirisi geldi","Investment"
-"Fon getirisi hesaba gecti","Investment"
-"Kripto kar realizasyonu","Investment"
-"Kira geliri aldim","Rental Income"
-"Ev kirasi yatti","Rental Income"
-"Dukkan kira odemesi geldi","Rental Income"
-"Aylik kira tahsilati","Rental Income"
-"Hediye para geldi","Gift"
-"Nakit hediye aldim","Gift"
-"Bayram harcligi geldi","Gift"
-"Aileden para geldi","Gift"
-"Beklenmedik gelir elde ettim","Other Income"
-"Cesitli gelir","Other Income"
-"Diger gelir girisi","Other Income"
-"Gelir transferi geldi","Other Income"
-"Aylık maaş ödemesi","Salary"
-"Maaş bordrosu yattı","Salary"
-"Personel maaşı hesabıma geçti","Salary"
-"Net maaş ödemesi geldi","Salary"
-"İş yerinden maaş aldım","Salary"
-"Maaş geliri","Salary"
-"Aylık ücret ödemesi","Salary"
-"Şirket maaş yatırdı","Salary"
-"Maaş hesabıma aktarıldı","Salary"
-"Düzenli maaş geliri","Salary"
-"İşveren maaş ödemesi","Salary"
-"Bu ayki maaşım yattı","Salary"
-"Maaş ödemesi alındı","Salary"
-"Aylık çalışma ücreti","Salary"
-"Bordro ödemesi","Salary"
-"Maaş transferi","Salary"
-"Ek mesai ücreti","Additional Income"
-"Prim ödemesi aldım","Additional Income"
-"Bonus gelir geldi","Additional Income"
-"Yan iş ödemesi","Additional Income"
-"Part time maaşı","Additional Income"
-"Ek ödeme hesabıma geçti","Additional Income"
-"Satış primi geldi","Additional Income"
-"Fazla mesai parası","Additional Income"
-"Komisyon geliri","Additional Income"
-"Hafta sonu işinden ödeme","Additional Income"
-"Ek kazanç","Additional Income"
-"Performans primi","Additional Income"
-"Geçici iş ödemesi","Additional Income"
-"Proje dışı ek gelir","Additional Income"
-"Hobi satışından gelir","Additional Income"
-"İkinci iş kazancı","Additional Income"
-"KYK burs ödemesi","Scholarship"
-"Üniversite bursu yattı","Scholarship"
-"Eğitim desteği geldi","Scholarship"
-"Öğrenci burs ödemesi","Scholarship"
-"Başarı bursu aldım","Scholarship"
-"Burs parası hesabıma geçti","Scholarship"
-"Aylık burs ödemesi","Scholarship"
-"Öğrenim desteği","Scholarship"
-"Vakıf bursu yattı","Scholarship"
-"Okul bursu geldi","Scholarship"
-"Eğitim yardımı","Scholarship"
-"Burs desteği","Scholarship"
-"Öğrenci destek ödemesi","Scholarship"
-"Akademik burs ödemesi","Scholarship"
-"Dönem bursu","Scholarship"
-"Burs transferi","Scholarship"
-"Freelance yazılım ödemesi","Freelance"
-"Freelance tasarım işi","Freelance"
-"Serbest çalışma geliri","Freelance"
-"Danışmanlık projesi ödemesi","Freelance"
-"Logo tasarım ücreti","Freelance"
-"Web sitesi işi ödemesi","Freelance"
-"Mobil uygulama işi geliri","Freelance"
-"Uzaktan proje ödemesi","Freelance"
-"Serbest proje kazancı","Freelance"
-"Freelance çeviri ücreti","Freelance"
-"İçerik üretimi ödemesi","Freelance"
-"Freelance destek hizmeti","Freelance"
-"Proje teslim ödemesi","Freelance"
-"Müşteriden hizmet bedeli","Freelance"
-"Serbest iş kazancı","Freelance"
-"Danışmanlık geliri","Freelance"
-"Hisse temettü geliri","Investment"
-"Fon kazancı","Investment"
-"Kripto satış karı","Investment"
-"Altın bozdurma karı","Investment"
-"Yatırım getirisi","Investment"
-"Borsa kazancı","Investment"
-"Mevduat faizi geldi","Investment"
-"Faiz geliri","Investment"
-"Portföy getirisi","Investment"
-"Fon satış geliri","Investment"
-"Hisse satış kazancı","Investment"
-"Döviz karı","Investment"
-"Kripto getirisi","Investment"
-"Yatırım hesabından gelir","Investment"
-"Repo getirisi","Investment"
-"Temettü ödemesi","Investment"
-"Kiracıdan ödeme geldi","Rental Income"
-"Ev kira geliri","Rental Income"
-"Dükkan kirası yattı","Rental Income"
-"Aylık kira ödemesi alındı","Rental Income"
-"Kiradan gelir elde ettim","Rental Income"
-"Konut kira tahsilatı","Rental Income"
-"İşyeri kira geliri","Rental Income"
-"Kira transferi","Rental Income"
-"Apartman kirası geldi","Rental Income"
-"Kira bedeli hesabıma geçti","Rental Income"
-"Mülk kira geliri","Rental Income"
-"Kiralık ev ödemesi","Rental Income"
-"Kira tahsil edildi","Rental Income"
-"Aylık kiracı ödemesi","Rental Income"
-"Daire kirası","Rental Income"
-"Kira geliri transferi","Rental Income"
-"Doğum günü hediyesi para","Gift"
-"Arkadaştan hediye para","Gift"
-"Aile desteği geldi","Gift"
-"Bayram harçlığı aldım","Gift"
-"Nakit hediye geldi","Gift"
-"Hediye ödemesi","Gift"
-"Annem para gönderdi","Gift"
-"Babam para gönderdi","Gift"
-"Yakından destek parası","Gift"
-"Özel gün hediyesi","Gift"
-"Harçlık geldi","Gift"
-"Aileden harçlık","Gift"
-"Hediye transferi","Gift"
-"Düğün hediyesi para","Gift"
-"Kutlama hediyesi","Gift"
-"Nakit destek","Gift"
-"İade parası geldi","Other Income"
-"Geri ödeme aldım","Other Income"
-"Masraf iadesi","Other Income"
-"Sigorta ödemesi geldi","Other Income"
-"Beklenmeyen ödeme","Other Income"
-"Çeşitli kazanç","Other Income"
-"Eski borç geri ödendi","Other Income"
-"Satıştan para geldi","Other Income"
-"İkinci el eşya sattım","Other Income"
-"Geri alınan ücret","Other Income"
-"Promosyon ödemesi","Other Income"
-"Kampanya kazancı","Other Income"
-"Hesaba gelen ek para","Other Income"
-"Diğer gelir ödemesi","Other Income"
-"Para iadesi","Other Income"
-"Ekstra gelir transferi","Other Income"
+text,category
+Migros alışverişi,Market
+Migros'tan gıda aldım,Market
+Bim market alışverişi,Market
+Bimden alışveriş yaptım,Market
+A101 alışveriş,Market
+A101 marketten alışveriş,Market
+Şok market alışverişi,Market
+Carrefour alışverişi,Market
+CarrefourSA market,Market
+Kasaptan et aldım,Market
+Manavdan sebze aldım,Market
+Sebze meyve alışverişi,Market
+Ev için gıda aldım,Market
+Market harcaması,Market
+Kahvaltılık aldım,Market
+Süt ve ekmek aldım,Market
+Atıştırmalık aldım,Market
+Gıda alışverişi,Market
+Market fişi,Market
+Market masrafı,Market
+Migrosa gittim,Market
+Bime uğradım,Market
+A101den bir şeyler aldım,Market
+Şoktan alışveriş,Market
+Carrefourdan alışveriş,Market
+Kasap alışverişi,Market
+Manav alışverişi,Market
+Ev alışverişi,Market
+Günlük market masrafı,Market
+Haftalık alışveriş,Market
+Lahmacun yedim,Food
+Lahmacun siparişi,Food
+Döner yedim,Food
+Döner siparişi,Food
+Pizza söyledim,Food
+Pizza siparişi,Food
+Hamburger yedim,Food
+Hamburger menü,Food
+Restoranda yemek,Food
+Kafede yemek,Food
+Fast food yedim,Food
+Yemek siparişi,Food
+Akşam yemeği,Food
+Öğle yemeği,Food
+Kahvaltı yaptım,Food
+Evden yemek söyledim,Food
+Yemek masrafı,Food
+Yemek harcaması,Food
+Dışarıda yemek,Food
+Lokantada yemek,Food
+Otobüs bileti,Transport
+Metro bileti,Transport
+Metro kart dolumu,Transport
+Taksi ücreti,Transport
+Minibüs parası,Transport
+Dolmuş parası,Transport
+Tramvay bileti,Transport
+Ulaşım harcaması,Transport
+Ulaşım masrafı,Transport
+Otobüs kartı dolum,Transport
+Akbil doldurdum,Transport
+İstanbulkart dolumu,Transport
+Benzin aldım,Transport
+Mazot aldım,Transport
+Akaryakıt harcaması,Transport
+Araç yakıt gideri,Transport
+Otopark ücreti,Transport
+Araba park parası,Transport
+Uçak bileti,Transport
+Uçuş bileti,Transport
+Aylik maas yatti,Salary
+Maasim hesaba gecti,Salary
+Sirket maasi odedi,Salary
+Bordro maasi geldi,Salary
+Ek gelir elde ettim,Additional Income
+Yan isten para geldi,Additional Income
+Part time ucreti yatti,Additional Income
+Ek odeme aldim,Additional Income
+Burs yatti,Scholarship
+Egitim bursu geldi,Scholarship
+KYK bursu aldim,Scholarship
+Ogrenim bursu hesaba gecti,Scholarship
+Freelance proje odemesi geldi,Freelance
+Serbest is ucreti aldim,Freelance
+Freelance tasarim odemesi,Freelance
+Danismanlik ucreti geldi,Freelance
+Yatirimdan kar ettim,Investment
+Hisse getirisi geldi,Investment
+Fon getirisi hesaba gecti,Investment
+Kripto kar realizasyonu,Investment
+Kira geliri aldim,Rental Income
+Ev kirasi yatti,Rental Income
+Dukkan kira odemesi geldi,Rental Income
+Aylik kira tahsilati,Rental Income
+Hediye para geldi,Gift
+Nakit hediye aldim,Gift
+Bayram harcligi geldi,Gift
+Aileden para geldi,Gift
+Beklenmedik gelir elde ettim,Other Income
+Cesitli gelir,Other Income
+Diger gelir girisi,Other Income
+Gelir transferi geldi,Other Income
+Aylık maaş ödemesi,Salary
+Maaş bordrosu yattı,Salary
+Personel maaşı hesabıma geçti,Salary
+Net maaş ödemesi geldi,Salary
+İş yerinden maaş aldım,Salary
+Maaş geliri,Salary
+Aylık ücret ödemesi,Salary
+Şirket maaş yatırdı,Salary
+Maaş hesabıma aktarıldı,Salary
+Düzenli maaş geliri,Salary
+İşveren maaş ödemesi,Salary
+Bu ayki maaşım yattı,Salary
+Maaş ödemesi alındı,Salary
+Aylık çalışma ücreti,Salary
+Bordro ödemesi,Salary
+Maaş transferi,Salary
+Ek mesai ücreti,Additional Income
+Prim ödemesi aldım,Additional Income
+Bonus gelir geldi,Additional Income
+Yan iş ödemesi,Additional Income
+Part time maaşı,Additional Income
+Ek ödeme hesabıma geçti,Additional Income
+Satış primi geldi,Additional Income
+Fazla mesai parası,Additional Income
+Komisyon geliri,Additional Income
+Hafta sonu işinden ödeme,Additional Income
+Ek kazanç,Additional Income
+Performans primi,Additional Income
+Geçici iş ödemesi,Additional Income
+Proje dışı ek gelir,Additional Income
+Hobi satışından gelir,Additional Income
+İkinci iş kazancı,Additional Income
+KYK burs ödemesi,Scholarship
+Üniversite bursu yattı,Scholarship
+Eğitim desteği geldi,Scholarship
+Öğrenci burs ödemesi,Scholarship
+Başarı bursu aldım,Scholarship
+Burs parası hesabıma geçti,Scholarship
+Aylık burs ödemesi,Scholarship
+Öğrenim desteği,Scholarship
+Vakıf bursu yattı,Scholarship
+Okul bursu geldi,Scholarship
+Eğitim yardımı,Scholarship
+Burs desteği,Scholarship
+Öğrenci destek ödemesi,Scholarship
+Akademik burs ödemesi,Scholarship
+Dönem bursu,Scholarship
+Burs transferi,Scholarship
+Freelance yazılım ödemesi,Freelance
+Freelance tasarım işi,Freelance
+Serbest çalışma geliri,Freelance
+Danışmanlık projesi ödemesi,Freelance
+Logo tasarım ücreti,Freelance
+Web sitesi işi ödemesi,Freelance
+Mobil uygulama işi geliri,Freelance
+Uzaktan proje ödemesi,Freelance
+Serbest proje kazancı,Freelance
+Freelance çeviri ücreti,Freelance
+İçerik üretimi ödemesi,Freelance
+Freelance destek hizmeti,Freelance
+Proje teslim ödemesi,Freelance
+Müşteriden hizmet bedeli,Freelance
+Serbest iş kazancı,Freelance
+Danışmanlık geliri,Freelance
+Hisse temettü geliri,Investment
+Fon kazancı,Investment
+Kripto satış karı,Investment
+Altın bozdurma karı,Investment
+Yatırım getirisi,Investment
+Borsa kazancı,Investment
+Mevduat faizi geldi,Investment
+Faiz geliri,Investment
+Portföy getirisi,Investment
+Fon satış geliri,Investment
+Hisse satış kazancı,Investment
+Döviz karı,Investment
+Kripto getirisi,Investment
+Yatırım hesabından gelir,Investment
+Repo getirisi,Investment
+Temettü ödemesi,Investment
+Kiracıdan ödeme geldi,Rental Income
+Ev kira geliri,Rental Income
+Dükkan kirası yattı,Rental Income
+Aylık kira ödemesi alındı,Rental Income
+Kiradan gelir elde ettim,Rental Income
+Konut kira tahsilatı,Rental Income
+İşyeri kira geliri,Rental Income
+Kira transferi,Rental Income
+Apartman kirası geldi,Rental Income
+Kira bedeli hesabıma geçti,Rental Income
+Mülk kira geliri,Rental Income
+Kiralık ev ödemesi,Rental Income
+Kira tahsil edildi,Rental Income
+Aylık kiracı ödemesi,Rental Income
+Daire kirası,Rental Income
+Kira geliri transferi,Rental Income
+Doğum günü hediyesi para,Gift
+Arkadaştan hediye para,Gift
+Aile desteği geldi,Gift
+Bayram harçlığı aldım,Gift
+Nakit hediye geldi,Gift
+Hediye ödemesi,Gift
+Annem para gönderdi,Gift
+Babam para gönderdi,Gift
+Yakından destek parası,Gift
+Özel gün hediyesi,Gift
+Harçlık geldi,Gift
+Aileden harçlık,Gift
+Hediye transferi,Gift
+Düğün hediyesi para,Gift
+Kutlama hediyesi,Gift
+Nakit destek,Gift
+İade parası geldi,Other Income
+Geri ödeme aldım,Other Income
+Masraf iadesi,Other Income
+Sigorta ödemesi geldi,Other Income
+Beklenmeyen ödeme,Other Income
+Çeşitli kazanç,Other Income
+Eski borç geri ödendi,Other Income
+Satıştan para geldi,Other Income
+İkinci el eşya sattım,Other Income
+Geri alınan ücret,Other Income
+Promosyon ödemesi,Other Income
+Kampanya kazancı,Other Income
+Hesaba gelen ek para,Other Income
+Diğer gelir ödemesi,Other Income
+Para iadesi,Other Income
+Ekstra gelir transferi,Other Income
+Migros s?t ekmek,Market
+Migros i?in s?t ekmek ?demesi,Market
+Migros s?t ekmek masraf?,Market
+Migros sebze meyve,Market
+Migros i?in sebze meyve ?demesi,Market
+Migros sebze meyve masraf?,Market
+Migros temizlik ?r?n?,Market
+Migros i?in temizlik ?r?n? ?demesi,Market
+Migros temizlik ?r?n? masraf?,Market
+Migros haftal?k al??veri?,Market
+Migros i?in haftal?k al??veri? ?demesi,Market
+Migros haftal?k al??veri? masraf?,Market
+Migros kahvalt?l?k,Market
+Migros i?in kahvalt?l?k ?demesi,Market
+Migros kahvalt?l?k masraf?,Market
+Migros et tavuk,Market
+Migros i?in et tavuk ?demesi,Market
+Migros et tavuk masraf?,Market
+Migros bakliyat,Market
+Migros i?in bakliyat ?demesi,Market
+Migros bakliyat masraf?,Market
+Migros at??t?rmal?k,Market
+Migros i?in at??t?rmal?k ?demesi,Market
+Migros at??t?rmal?k masraf?,Market
+Migros ev ihtiya?lar?,Market
+Migros i?in ev ihtiya?lar? ?demesi,Market
+Migros ev ihtiya?lar? masraf?,Market
+Migros g?da al??veri?i,Market
+Migros i?in g?da al??veri?i ?demesi,Market
+Migros g?da al??veri?i masraf?,Market
+Bim s?t ekmek,Market
+Bim i?in s?t ekmek ?demesi,Market
+Bim s?t ekmek masraf?,Market
+Bim sebze meyve,Market
+Bim i?in sebze meyve ?demesi,Market
+Bim sebze meyve masraf?,Market
+Bim temizlik ?r?n?,Market
+Bim i?in temizlik ?r?n? ?demesi,Market
+Bim temizlik ?r?n? masraf?,Market
+Bim haftal?k al??veri?,Market
+Bim i?in haftal?k al??veri? ?demesi,Market
+Bim haftal?k al??veri? masraf?,Market
+Bim kahvalt?l?k,Market
+Bim i?in kahvalt?l?k ?demesi,Market
+Bim kahvalt?l?k masraf?,Market
+Bim et tavuk,Market
+Bim i?in et tavuk ?demesi,Market
+Bim et tavuk masraf?,Market
+Bim bakliyat,Market
+Bim i?in bakliyat ?demesi,Market
+Bim bakliyat masraf?,Market
+Bim at??t?rmal?k,Market
+Bim i?in at??t?rmal?k ?demesi,Market
+Bim at??t?rmal?k masraf?,Market
+Bim ev ihtiya?lar?,Market
+Bim i?in ev ihtiya?lar? ?demesi,Market
+Bim ev ihtiya?lar? masraf?,Market
+Bim g?da al??veri?i,Market
+Bim i?in g?da al??veri?i ?demesi,Market
+Bim g?da al??veri?i masraf?,Market
+A101 s?t ekmek,Market
+Yemeksepeti ??le yeme?i,Food
+Yemeksepeti i?in ??le yeme?i ?demesi,Food
+Yemeksepeti ??le yeme?i masraf?,Food
+Yemeksepeti ak?am yeme?i,Food
+Yemeksepeti i?in ak?am yeme?i ?demesi,Food
+Yemeksepeti ak?am yeme?i masraf?,Food
+Yemeksepeti kahve,Food
+Yemeksepeti i?in kahve ?demesi,Food
+Yemeksepeti kahve masraf?,Food
+Yemeksepeti pizza,Food
+Yemeksepeti i?in pizza ?demesi,Food
+Yemeksepeti pizza masraf?,Food
+Yemeksepeti hamburger,Food
+Yemeksepeti i?in hamburger ?demesi,Food
+Yemeksepeti hamburger masraf?,Food
+Yemeksepeti d?ner,Food
+Yemeksepeti i?in d?ner ?demesi,Food
+Yemeksepeti d?ner masraf?,Food
+Yemeksepeti lahmacun,Food
+Yemeksepeti i?in lahmacun ?demesi,Food
+Yemeksepeti lahmacun masraf?,Food
+Yemeksepeti tatl?,Food
+Yemeksepeti i?in tatl? ?demesi,Food
+Yemeksepeti tatl? masraf?,Food
+Yemeksepeti men?,Food
+Yemeksepeti i?in men? ?demesi,Food
+Yemeksepeti men? masraf?,Food
+Yemeksepeti yemek sipari?i,Food
+Yemeksepeti i?in yemek sipari?i ?demesi,Food
+Yemeksepeti yemek sipari?i masraf?,Food
+GetirYemek ??le yeme?i,Food
+GetirYemek i?in ??le yeme?i ?demesi,Food
+GetirYemek ??le yeme?i masraf?,Food
+GetirYemek ak?am yeme?i,Food
+GetirYemek i?in ak?am yeme?i ?demesi,Food
+GetirYemek ak?am yeme?i masraf?,Food
+GetirYemek kahve,Food
+GetirYemek i?in kahve ?demesi,Food
+GetirYemek kahve masraf?,Food
+GetirYemek pizza,Food
+GetirYemek i?in pizza ?demesi,Food
+GetirYemek pizza masraf?,Food
+GetirYemek hamburger,Food
+GetirYemek i?in hamburger ?demesi,Food
+GetirYemek hamburger masraf?,Food
+GetirYemek d?ner,Food
+GetirYemek i?in d?ner ?demesi,Food
+GetirYemek d?ner masraf?,Food
+GetirYemek lahmacun,Food
+GetirYemek i?in lahmacun ?demesi,Food
+GetirYemek lahmacun masraf?,Food
+GetirYemek tatl?,Food
+GetirYemek i?in tatl? ?demesi,Food
+GetirYemek tatl? masraf?,Food
+GetirYemek men?,Food
+GetirYemek i?in men? ?demesi,Food
+GetirYemek men? masraf?,Food
+GetirYemek yemek sipari?i,Food
+GetirYemek i?in yemek sipari?i ?demesi,Food
+GetirYemek yemek sipari?i masraf?,Food
+Trendyol yemek ??le yeme?i,Food
+Trendyol yemek i?in ??le yeme?i ?demesi,Food
+Trendyol yemek ??le yeme?i masraf?,Food
+Trendyol yemek ak?am yeme?i,Food
+Trendyol yemek i?in ak?am yeme?i ?demesi,Food
+Trendyol yemek ak?am yeme?i masraf?,Food
+Trendyol yemek kahve,Food
+Trendyol yemek i?in kahve ?demesi,Food
+Trendyol yemek kahve masraf?,Food
+Trendyol yemek pizza,Food
+Trendyol yemek i?in pizza ?demesi,Food
+?stanbulkart kart dolumu,Transport
+?stanbulkart i?in kart dolumu ?demesi,Transport
+?stanbulkart kart dolumu masraf?,Transport
+?stanbulkart bilet,Transport
+?stanbulkart i?in bilet ?demesi,Transport
+?stanbulkart bilet masraf?,Transport
+?stanbulkart ula??m ?creti,Transport
+?stanbulkart i?in ula??m ?creti ?demesi,Transport
+?stanbulkart ula??m ?creti masraf?,Transport
+?stanbulkart yak?t,Transport
+?stanbulkart i?in yak?t ?demesi,Transport
+?stanbulkart yak?t masraf?,Transport
+?stanbulkart park ?creti,Transport
+?stanbulkart i?in park ?creti ?demesi,Transport
+?stanbulkart park ?creti masraf?,Transport
+?stanbulkart abonman,Transport
+?stanbulkart i?in abonman ?demesi,Transport
+?stanbulkart abonman masraf?,Transport
+?stanbulkart aktarma,Transport
+?stanbulkart i?in aktarma ?demesi,Transport
+?stanbulkart aktarma masraf?,Transport
+?stanbulkart taksi yolculu?u,Transport
+?stanbulkart i?in taksi yolculu?u ?demesi,Transport
+?stanbulkart taksi yolculu?u masraf?,Transport
+?stanbulkart servis ?creti,Transport
+?stanbulkart i?in servis ?creti ?demesi,Transport
+?stanbulkart servis ?creti masraf?,Transport
+?stanbulkart yol masraf?,Transport
+?stanbulkart i?in yol masraf? ?demesi,Transport
+?stanbulkart yol masraf? masraf?,Transport
+metro kart dolumu,Transport
+metro i?in kart dolumu ?demesi,Transport
+metro kart dolumu masraf?,Transport
+metro bilet,Transport
+metro i?in bilet ?demesi,Transport
+metro bilet masraf?,Transport
+metro ula??m ?creti,Transport
+metro i?in ula??m ?creti ?demesi,Transport
+metro ula??m ?creti masraf?,Transport
+metro yak?t,Transport
+metro i?in yak?t ?demesi,Transport
+metro yak?t masraf?,Transport
+metro park ?creti,Transport
+metro i?in park ?creti ?demesi,Transport
+metro park ?creti masraf?,Transport
+metro abonman,Transport
+metro i?in abonman ?demesi,Transport
+metro abonman masraf?,Transport
+metro aktarma,Transport
+metro i?in aktarma ?demesi,Transport
+metro aktarma masraf?,Transport
+metro taksi yolculu?u,Transport
+metro i?in taksi yolculu?u ?demesi,Transport
+metro taksi yolculu?u masraf?,Transport
+metro servis ?creti,Transport
+metro i?in servis ?creti ?demesi,Transport
+metro servis ?creti masraf?,Transport
+metro yol masraf?,Transport
+metro i?in yol masraf? ?demesi,Transport
+metro yol masraf? masraf?,Transport
+otob?s kart dolumu,Transport
+otob?s i?in kart dolumu ?demesi,Transport
+otob?s kart dolumu masraf?,Transport
+otob?s bilet,Transport
+otob?s i?in bilet ?demesi,Transport
+otob?s bilet masraf?,Transport
+otob?s ula??m ?creti,Transport
+otob?s i?in ula??m ?creti ?demesi,Transport
+otob?s ula??m ?creti masraf?,Transport
+otob?s yak?t,Transport
+otob?s i?in yak?t ?demesi,Transport
+maa? geldi,Salary
+maa? yatt?,Salary
+maa? hesab?ma ge?ti,Salary
+maa? ald?m,Salary
+maa? transfer edildi,Salary
+maa? ?dendi,Salary
+maa? tahsil edildi,Salary
+maa? yat?r?ld?,Salary
+bug?n maa?,Salary
+bug?n maa? geliri,Salary
+bu ay maa?,Salary
+bu ay maa? geliri,Salary
+online maa?,Salary
+online maa? geliri,Salary
+banka hesab?ma maa?,Salary
+banka hesab?ma maa? geliri,Salary
+nakit olarak maa?,Salary
+nakit olarak maa? geliri,Salary
+d?zenli maa?,Salary
+d?zenli maa? geliri,Salary
+tek seferlik maa?,Salary
+tek seferlik maa? geliri,Salary
+ek olarak maa?,Salary
+ek olarak maa? geliri,Salary
+bordro geldi,Salary
+bordro yatt?,Salary
+bordro hesab?ma ge?ti,Salary
+bordro ald?m,Salary
+bordro transfer edildi,Salary
+bordro ?dendi,Salary
+bordro tahsil edildi,Salary
+bordro yat?r?ld?,Salary
+bug?n bordro,Salary
+bug?n bordro geliri,Salary
+bu ay bordro,Salary
+bu ay bordro geliri,Salary
+online bordro,Salary
+online bordro geliri,Salary
+banka hesab?ma bordro,Salary
+banka hesab?ma bordro geliri,Salary
+nakit olarak bordro,Salary
+nakit olarak bordro geliri,Salary
+d?zenli bordro,Salary
+d?zenli bordro geliri,Salary
+tek seferlik bordro,Salary
+tek seferlik bordro geliri,Salary
+ek olarak bordro,Salary
+ek olarak bordro geliri,Salary
+ayl?k ?cret geldi,Salary
+ayl?k ?cret yatt?,Salary
+ayl?k ?cret hesab?ma ge?ti,Salary
+ayl?k ?cret ald?m,Salary
+ayl?k ?cret transfer edildi,Salary
+ayl?k ?cret ?dendi,Salary
+ayl?k ?cret tahsil edildi,Salary
+ayl?k ?cret yat?r?ld?,Salary
+bug?n ayl?k ?cret,Salary
+bug?n ayl?k ?cret geliri,Salary
+bu ay ayl?k ?cret,Salary
+bu ay ayl?k ?cret geliri,Salary
+online ayl?k ?cret,Salary
+online ayl?k ?cret geliri,Salary
+banka hesab?ma ayl?k ?cret,Salary
+banka hesab?ma ayl?k ?cret geliri,Salary
+nakit olarak ayl?k ?cret,Salary
+nakit olarak ayl?k ?cret geliri,Salary
+d?zenli ayl?k ?cret,Salary
+d?zenli ayl?k ?cret geliri,Salary
+tek seferlik ayl?k ?cret,Salary
+tek seferlik ayl?k ?cret geliri,Salary
+ek olarak ayl?k ?cret,Salary
+prim geldi,Additional Income
+prim yatt?,Additional Income
+prim hesab?ma ge?ti,Additional Income
+prim ald?m,Additional Income
+prim transfer edildi,Additional Income
+prim ?dendi,Additional Income
+prim tahsil edildi,Additional Income
+prim yat?r?ld?,Additional Income
+bug?n prim,Additional Income
+bug?n prim geliri,Additional Income
+bu ay prim,Additional Income
+bu ay prim geliri,Additional Income
+online prim,Additional Income
+online prim geliri,Additional Income
+banka hesab?ma prim,Additional Income
+banka hesab?ma prim geliri,Additional Income
+nakit olarak prim,Additional Income
+nakit olarak prim geliri,Additional Income
+d?zenli prim,Additional Income
+d?zenli prim geliri,Additional Income
+tek seferlik prim,Additional Income
+tek seferlik prim geliri,Additional Income
+ek olarak prim,Additional Income
+ek olarak prim geliri,Additional Income
+bonus geldi,Additional Income
+bonus yatt?,Additional Income
+bonus hesab?ma ge?ti,Additional Income
+bonus ald?m,Additional Income
+bonus transfer edildi,Additional Income
+bonus ?dendi,Additional Income
+bonus tahsil edildi,Additional Income
+bonus yat?r?ld?,Additional Income
+bug?n bonus,Additional Income
+bug?n bonus geliri,Additional Income
+bu ay bonus,Additional Income
+bu ay bonus geliri,Additional Income
+online bonus,Additional Income
+online bonus geliri,Additional Income
+banka hesab?ma bonus,Additional Income
+banka hesab?ma bonus geliri,Additional Income
+nakit olarak bonus,Additional Income
+nakit olarak bonus geliri,Additional Income
+d?zenli bonus,Additional Income
+d?zenli bonus geliri,Additional Income
+tek seferlik bonus,Additional Income
+tek seferlik bonus geliri,Additional Income
+ek olarak bonus,Additional Income
+ek olarak bonus geliri,Additional Income
+ek mesai geldi,Additional Income
+ek mesai yatt?,Additional Income
+ek mesai hesab?ma ge?ti,Additional Income
+ek mesai ald?m,Additional Income
+ek mesai transfer edildi,Additional Income
+ek mesai ?dendi,Additional Income
+ek mesai tahsil edildi,Additional Income
+ek mesai yat?r?ld?,Additional Income
+bug?n ek mesai,Additional Income
+bug?n ek mesai geliri,Additional Income
+bu ay ek mesai,Additional Income
+bu ay ek mesai geliri,Additional Income
+online ek mesai,Additional Income
+online ek mesai geliri,Additional Income
+banka hesab?ma ek mesai,Additional Income
+banka hesab?ma ek mesai geliri,Additional Income
+nakit olarak ek mesai,Additional Income
+nakit olarak ek mesai geliri,Additional Income
+d?zenli ek mesai,Additional Income
+d?zenli ek mesai geliri,Additional Income
+tek seferlik ek mesai,Additional Income
+tek seferlik ek mesai geliri,Additional Income
+ek olarak ek mesai,Additional Income
+KYK bursu geldi,Scholarship
+KYK bursu yatt?,Scholarship
+KYK bursu hesab?ma ge?ti,Scholarship
+KYK bursu ald?m,Scholarship
+KYK bursu transfer edildi,Scholarship
+KYK bursu ?dendi,Scholarship
+KYK bursu tahsil edildi,Scholarship
+KYK bursu yat?r?ld?,Scholarship
+bug?n KYK bursu,Scholarship
+bug?n KYK bursu geliri,Scholarship
+bu ay KYK bursu,Scholarship
+bu ay KYK bursu geliri,Scholarship
+online KYK bursu,Scholarship
+online KYK bursu geliri,Scholarship
+banka hesab?ma KYK bursu,Scholarship
+banka hesab?ma KYK bursu geliri,Scholarship
+nakit olarak KYK bursu,Scholarship
+nakit olarak KYK bursu geliri,Scholarship
+d?zenli KYK bursu,Scholarship
+d?zenli KYK bursu geliri,Scholarship
+tek seferlik KYK bursu,Scholarship
+tek seferlik KYK bursu geliri,Scholarship
+ek olarak KYK bursu,Scholarship
+ek olarak KYK bursu geliri,Scholarship
+?niversite bursu geldi,Scholarship
+?niversite bursu yatt?,Scholarship
+?niversite bursu hesab?ma ge?ti,Scholarship
+?niversite bursu ald?m,Scholarship
+?niversite bursu transfer edildi,Scholarship
+?niversite bursu ?dendi,Scholarship
+?niversite bursu tahsil edildi,Scholarship
+?niversite bursu yat?r?ld?,Scholarship
+bug?n ?niversite bursu,Scholarship
+bug?n ?niversite bursu geliri,Scholarship
+bu ay ?niversite bursu,Scholarship
+bu ay ?niversite bursu geliri,Scholarship
+online ?niversite bursu,Scholarship
+online ?niversite bursu geliri,Scholarship
+banka hesab?ma ?niversite bursu,Scholarship
+banka hesab?ma ?niversite bursu geliri,Scholarship
+nakit olarak ?niversite bursu,Scholarship
+nakit olarak ?niversite bursu geliri,Scholarship
+d?zenli ?niversite bursu,Scholarship
+d?zenli ?niversite bursu geliri,Scholarship
+tek seferlik ?niversite bursu,Scholarship
+tek seferlik ?niversite bursu geliri,Scholarship
+ek olarak ?niversite bursu,Scholarship
+ek olarak ?niversite bursu geliri,Scholarship
+e?itim deste?i geldi,Scholarship
+e?itim deste?i yatt?,Scholarship
+e?itim deste?i hesab?ma ge?ti,Scholarship
+e?itim deste?i ald?m,Scholarship
+e?itim deste?i transfer edildi,Scholarship
+e?itim deste?i ?dendi,Scholarship
+e?itim deste?i tahsil edildi,Scholarship
+e?itim deste?i yat?r?ld?,Scholarship
+bug?n e?itim deste?i,Scholarship
+bug?n e?itim deste?i geliri,Scholarship
+bu ay e?itim deste?i,Scholarship
+bu ay e?itim deste?i geliri,Scholarship
+online e?itim deste?i,Scholarship
+online e?itim deste?i geliri,Scholarship
+banka hesab?ma e?itim deste?i,Scholarship
+banka hesab?ma e?itim deste?i geliri,Scholarship
+nakit olarak e?itim deste?i,Scholarship
+nakit olarak e?itim deste?i geliri,Scholarship
+d?zenli e?itim deste?i,Scholarship
+d?zenli e?itim deste?i geliri,Scholarship
+tek seferlik e?itim deste?i,Scholarship
+tek seferlik e?itim deste?i geliri,Scholarship
+ek olarak e?itim deste?i,Scholarship
+freelance yaz?l?m geldi,Freelance
+freelance yaz?l?m yatt?,Freelance
+freelance yaz?l?m hesab?ma ge?ti,Freelance
+freelance yaz?l?m ald?m,Freelance
+freelance yaz?l?m transfer edildi,Freelance
+freelance yaz?l?m ?dendi,Freelance
+freelance yaz?l?m tahsil edildi,Freelance
+freelance yaz?l?m yat?r?ld?,Freelance
+bug?n freelance yaz?l?m,Freelance
+bug?n freelance yaz?l?m geliri,Freelance
+bu ay freelance yaz?l?m,Freelance
+bu ay freelance yaz?l?m geliri,Freelance
+online freelance yaz?l?m,Freelance
+online freelance yaz?l?m geliri,Freelance
+banka hesab?ma freelance yaz?l?m,Freelance
+banka hesab?ma freelance yaz?l?m geliri,Freelance
+nakit olarak freelance yaz?l?m,Freelance
+nakit olarak freelance yaz?l?m geliri,Freelance
+d?zenli freelance yaz?l?m,Freelance
+d?zenli freelance yaz?l?m geliri,Freelance
+tek seferlik freelance yaz?l?m,Freelance
+tek seferlik freelance yaz?l?m geliri,Freelance
+ek olarak freelance yaz?l?m,Freelance
+ek olarak freelance yaz?l?m geliri,Freelance
+tasar?m i?i geldi,Freelance
+tasar?m i?i yatt?,Freelance
+tasar?m i?i hesab?ma ge?ti,Freelance
+tasar?m i?i ald?m,Freelance
+tasar?m i?i transfer edildi,Freelance
+tasar?m i?i ?dendi,Freelance
+tasar?m i?i tahsil edildi,Freelance
+tasar?m i?i yat?r?ld?,Freelance
+bug?n tasar?m i?i,Freelance
+bug?n tasar?m i?i geliri,Freelance
+bu ay tasar?m i?i,Freelance
+bu ay tasar?m i?i geliri,Freelance
+online tasar?m i?i,Freelance
+online tasar?m i?i geliri,Freelance
+banka hesab?ma tasar?m i?i,Freelance
+banka hesab?ma tasar?m i?i geliri,Freelance
+nakit olarak tasar?m i?i,Freelance
+nakit olarak tasar?m i?i geliri,Freelance
+d?zenli tasar?m i?i,Freelance
+d?zenli tasar?m i?i geliri,Freelance
+tek seferlik tasar?m i?i,Freelance
+tek seferlik tasar?m i?i geliri,Freelance
+ek olarak tasar?m i?i,Freelance
+ek olarak tasar?m i?i geliri,Freelance
+dan??manl?k geldi,Freelance
+dan??manl?k yatt?,Freelance
+dan??manl?k hesab?ma ge?ti,Freelance
+dan??manl?k ald?m,Freelance
+dan??manl?k transfer edildi,Freelance
+dan??manl?k ?dendi,Freelance
+dan??manl?k tahsil edildi,Freelance
+dan??manl?k yat?r?ld?,Freelance
+bug?n dan??manl?k,Freelance
+bug?n dan??manl?k geliri,Freelance
+bu ay dan??manl?k,Freelance
+bu ay dan??manl?k geliri,Freelance
+online dan??manl?k,Freelance
+online dan??manl?k geliri,Freelance
+banka hesab?ma dan??manl?k,Freelance
+banka hesab?ma dan??manl?k geliri,Freelance
+nakit olarak dan??manl?k,Freelance
+nakit olarak dan??manl?k geliri,Freelance
+d?zenli dan??manl?k,Freelance
+d?zenli dan??manl?k geliri,Freelance
+tek seferlik dan??manl?k,Freelance
+tek seferlik dan??manl?k geliri,Freelance
+ek olarak dan??manl?k,Freelance
+hisse getirisi geldi,Investment
+hisse getirisi yatt?,Investment
+hisse getirisi hesab?ma ge?ti,Investment
+hisse getirisi ald?m,Investment
+hisse getirisi transfer edildi,Investment
+hisse getirisi ?dendi,Investment
+hisse getirisi tahsil edildi,Investment
+hisse getirisi yat?r?ld?,Investment
+bug?n hisse getirisi,Investment
+bug?n hisse getirisi geliri,Investment
+bu ay hisse getirisi,Investment
+bu ay hisse getirisi geliri,Investment
+online hisse getirisi,Investment
+online hisse getirisi geliri,Investment
+banka hesab?ma hisse getirisi,Investment
+banka hesab?ma hisse getirisi geliri,Investment
+nakit olarak hisse getirisi,Investment
+nakit olarak hisse getirisi geliri,Investment
+d?zenli hisse getirisi,Investment
+d?zenli hisse getirisi geliri,Investment
+tek seferlik hisse getirisi,Investment
+tek seferlik hisse getirisi geliri,Investment
+ek olarak hisse getirisi,Investment
+ek olarak hisse getirisi geliri,Investment
+fon kazanc? geldi,Investment
+fon kazanc? yatt?,Investment
+fon kazanc? hesab?ma ge?ti,Investment
+fon kazanc? ald?m,Investment
+fon kazanc? transfer edildi,Investment
+fon kazanc? ?dendi,Investment
+fon kazanc? tahsil edildi,Investment
+fon kazanc? yat?r?ld?,Investment
+bug?n fon kazanc?,Investment
+bug?n fon kazanc? geliri,Investment
+bu ay fon kazanc?,Investment
+bu ay fon kazanc? geliri,Investment
+online fon kazanc?,Investment
+online fon kazanc? geliri,Investment
+banka hesab?ma fon kazanc?,Investment
+banka hesab?ma fon kazanc? geliri,Investment
+nakit olarak fon kazanc?,Investment
+nakit olarak fon kazanc? geliri,Investment
+d?zenli fon kazanc?,Investment
+d?zenli fon kazanc? geliri,Investment
+tek seferlik fon kazanc?,Investment
+tek seferlik fon kazanc? geliri,Investment
+ek olarak fon kazanc?,Investment
+ek olarak fon kazanc? geliri,Investment
+kripto kar? geldi,Investment
+kripto kar? yatt?,Investment
+kripto kar? hesab?ma ge?ti,Investment
+kripto kar? ald?m,Investment
+kripto kar? transfer edildi,Investment
+kripto kar? ?dendi,Investment
+kripto kar? tahsil edildi,Investment
+kripto kar? yat?r?ld?,Investment
+bug?n kripto kar?,Investment
+bug?n kripto kar? geliri,Investment
+bu ay kripto kar?,Investment
+bu ay kripto kar? geliri,Investment
+online kripto kar?,Investment
+online kripto kar? geliri,Investment
+banka hesab?ma kripto kar?,Investment
+banka hesab?ma kripto kar? geliri,Investment
+nakit olarak kripto kar?,Investment
+nakit olarak kripto kar? geliri,Investment
+d?zenli kripto kar?,Investment
+d?zenli kripto kar? geliri,Investment
+tek seferlik kripto kar?,Investment
+tek seferlik kripto kar? geliri,Investment
+ek olarak kripto kar?,Investment
+ev kiras? geldi,Rental Income
+ev kiras? yatt?,Rental Income
+ev kiras? hesab?ma ge?ti,Rental Income
+ev kiras? ald?m,Rental Income
+ev kiras? transfer edildi,Rental Income
+ev kiras? ?dendi,Rental Income
+ev kiras? tahsil edildi,Rental Income
+ev kiras? yat?r?ld?,Rental Income
+bug?n ev kiras?,Rental Income
+bug?n ev kiras? geliri,Rental Income
+bu ay ev kiras?,Rental Income
+bu ay ev kiras? geliri,Rental Income
+online ev kiras?,Rental Income
+online ev kiras? geliri,Rental Income
+banka hesab?ma ev kiras?,Rental Income
+banka hesab?ma ev kiras? geliri,Rental Income
+nakit olarak ev kiras?,Rental Income
+nakit olarak ev kiras? geliri,Rental Income
+d?zenli ev kiras?,Rental Income
+d?zenli ev kiras? geliri,Rental Income
+tek seferlik ev kiras?,Rental Income
+tek seferlik ev kiras? geliri,Rental Income
+ek olarak ev kiras?,Rental Income
+ek olarak ev kiras? geliri,Rental Income
+d?kkan kiras? geldi,Rental Income
+d?kkan kiras? yatt?,Rental Income
+d?kkan kiras? hesab?ma ge?ti,Rental Income
+d?kkan kiras? ald?m,Rental Income
+d?kkan kiras? transfer edildi,Rental Income
+d?kkan kiras? ?dendi,Rental Income
+d?kkan kiras? tahsil edildi,Rental Income
+d?kkan kiras? yat?r?ld?,Rental Income
+bug?n d?kkan kiras?,Rental Income
+bug?n d?kkan kiras? geliri,Rental Income
+bu ay d?kkan kiras?,Rental Income
+bu ay d?kkan kiras? geliri,Rental Income
+online d?kkan kiras?,Rental Income
+online d?kkan kiras? geliri,Rental Income
+banka hesab?ma d?kkan kiras?,Rental Income
+banka hesab?ma d?kkan kiras? geliri,Rental Income
+nakit olarak d?kkan kiras?,Rental Income
+nakit olarak d?kkan kiras? geliri,Rental Income
+d?zenli d?kkan kiras?,Rental Income
+d?zenli d?kkan kiras? geliri,Rental Income
+tek seferlik d?kkan kiras?,Rental Income
+tek seferlik d?kkan kiras? geliri,Rental Income
+ek olarak d?kkan kiras?,Rental Income
+ek olarak d?kkan kiras? geliri,Rental Income
+konut kira geliri geldi,Rental Income
+konut kira geliri yatt?,Rental Income
+konut kira geliri hesab?ma ge?ti,Rental Income
+konut kira geliri ald?m,Rental Income
+konut kira geliri transfer edildi,Rental Income
+konut kira geliri ?dendi,Rental Income
+konut kira geliri tahsil edildi,Rental Income
+konut kira geliri yat?r?ld?,Rental Income
+bug?n konut kira geliri,Rental Income
+bug?n konut kira geliri geliri,Rental Income
+bu ay konut kira geliri,Rental Income
+bu ay konut kira geliri geliri,Rental Income
+online konut kira geliri,Rental Income
+online konut kira geliri geliri,Rental Income
+banka hesab?ma konut kira geliri,Rental Income
+banka hesab?ma konut kira geliri geliri,Rental Income
+nakit olarak konut kira geliri,Rental Income
+nakit olarak konut kira geliri geliri,Rental Income
+d?zenli konut kira geliri,Rental Income
+d?zenli konut kira geliri geliri,Rental Income
+tek seferlik konut kira geliri,Rental Income
+tek seferlik konut kira geliri geliri,Rental Income
+ek olarak konut kira geliri,Rental Income
+hediye para geldi,Gift
+hediye para yatt?,Gift
+hediye para hesab?ma ge?ti,Gift
+hediye para ald?m,Gift
+hediye para transfer edildi,Gift
+hediye para ?dendi,Gift
+hediye para tahsil edildi,Gift
+hediye para yat?r?ld?,Gift
+bug?n hediye para,Gift
+bug?n hediye para geliri,Gift
+bu ay hediye para,Gift
+bu ay hediye para geliri,Gift
+online hediye para,Gift
+online hediye para geliri,Gift
+banka hesab?ma hediye para,Gift
+banka hesab?ma hediye para geliri,Gift
+nakit olarak hediye para,Gift
+nakit olarak hediye para geliri,Gift
+d?zenli hediye para,Gift
+d?zenli hediye para geliri,Gift
+tek seferlik hediye para,Gift
+tek seferlik hediye para geliri,Gift
+ek olarak hediye para,Gift
+ek olarak hediye para geliri,Gift
+bayram har?l??? geldi,Gift
+bayram har?l??? yatt?,Gift
+bayram har?l??? hesab?ma ge?ti,Gift
+bayram har?l??? ald?m,Gift
+bayram har?l??? transfer edildi,Gift
+bayram har?l??? ?dendi,Gift
+bayram har?l??? tahsil edildi,Gift
+bayram har?l??? yat?r?ld?,Gift
+bug?n bayram har?l???,Gift
+bug?n bayram har?l??? geliri,Gift
+bu ay bayram har?l???,Gift
+bu ay bayram har?l??? geliri,Gift
+online bayram har?l???,Gift
+online bayram har?l??? geliri,Gift
+banka hesab?ma bayram har?l???,Gift
+banka hesab?ma bayram har?l??? geliri,Gift
+nakit olarak bayram har?l???,Gift
+nakit olarak bayram har?l??? geliri,Gift
+d?zenli bayram har?l???,Gift
+d?zenli bayram har?l??? geliri,Gift
+tek seferlik bayram har?l???,Gift
+tek seferlik bayram har?l??? geliri,Gift
+ek olarak bayram har?l???,Gift
+ek olarak bayram har?l??? geliri,Gift
+aile deste?i geldi,Gift
+aile deste?i yatt?,Gift
+aile deste?i hesab?ma ge?ti,Gift
+aile deste?i ald?m,Gift
+aile deste?i transfer edildi,Gift
+aile deste?i ?dendi,Gift
+aile deste?i tahsil edildi,Gift
+aile deste?i yat?r?ld?,Gift
+bug?n aile deste?i,Gift
+bug?n aile deste?i geliri,Gift
+bu ay aile deste?i,Gift
+bu ay aile deste?i geliri,Gift
+online aile deste?i,Gift
+online aile deste?i geliri,Gift
+banka hesab?ma aile deste?i,Gift
+banka hesab?ma aile deste?i geliri,Gift
+nakit olarak aile deste?i,Gift
+nakit olarak aile deste?i geliri,Gift
+d?zenli aile deste?i,Gift
+d?zenli aile deste?i geliri,Gift
+tek seferlik aile deste?i,Gift
+tek seferlik aile deste?i geliri,Gift
+ek olarak aile deste?i,Gift
+para iadesi geldi,Other Income
+para iadesi yatt?,Other Income
+para iadesi hesab?ma ge?ti,Other Income
+para iadesi ald?m,Other Income
+para iadesi transfer edildi,Other Income
+para iadesi ?dendi,Other Income
+para iadesi tahsil edildi,Other Income
+para iadesi yat?r?ld?,Other Income
+bug?n para iadesi,Other Income
+bug?n para iadesi geliri,Other Income
+bu ay para iadesi,Other Income
+bu ay para iadesi geliri,Other Income
+online para iadesi,Other Income
+online para iadesi geliri,Other Income
+banka hesab?ma para iadesi,Other Income
+banka hesab?ma para iadesi geliri,Other Income
+nakit olarak para iadesi,Other Income
+nakit olarak para iadesi geliri,Other Income
+d?zenli para iadesi,Other Income
+d?zenli para iadesi geliri,Other Income
+tek seferlik para iadesi,Other Income
+tek seferlik para iadesi geliri,Other Income
+ek olarak para iadesi,Other Income
+ek olarak para iadesi geliri,Other Income
+masraf iadesi geldi,Other Income
+masraf iadesi yatt?,Other Income
+masraf iadesi hesab?ma ge?ti,Other Income
+masraf iadesi ald?m,Other Income
+masraf iadesi transfer edildi,Other Income
+masraf iadesi ?dendi,Other Income
+masraf iadesi tahsil edildi,Other Income
+masraf iadesi yat?r?ld?,Other Income
+bug?n masraf iadesi,Other Income
+bug?n masraf iadesi geliri,Other Income
+bu ay masraf iadesi,Other Income
+bu ay masraf iadesi geliri,Other Income
+online masraf iadesi,Other Income
+online masraf iadesi geliri,Other Income
+banka hesab?ma masraf iadesi,Other Income
+banka hesab?ma masraf iadesi geliri,Other Income
+nakit olarak masraf iadesi,Other Income
+nakit olarak masraf iadesi geliri,Other Income
+d?zenli masraf iadesi,Other Income
+d?zenli masraf iadesi geliri,Other Income
+tek seferlik masraf iadesi,Other Income
+tek seferlik masraf iadesi geliri,Other Income
+ek olarak masraf iadesi,Other Income
+ek olarak masraf iadesi geliri,Other Income
+sigorta ?demesi geldi,Other Income
+sigorta ?demesi yatt?,Other Income
+sigorta ?demesi hesab?ma ge?ti,Other Income
+sigorta ?demesi ald?m,Other Income
+sigorta ?demesi transfer edildi,Other Income
+sigorta ?demesi ?dendi,Other Income
+sigorta ?demesi tahsil edildi,Other Income
+sigorta ?demesi yat?r?ld?,Other Income
+bug?n sigorta ?demesi,Other Income
+bug?n sigorta ?demesi geliri,Other Income
+bu ay sigorta ?demesi,Other Income
+bu ay sigorta ?demesi geliri,Other Income
+online sigorta ?demesi,Other Income
+online sigorta ?demesi geliri,Other Income
+banka hesab?ma sigorta ?demesi,Other Income
+banka hesab?ma sigorta ?demesi geliri,Other Income
+nakit olarak sigorta ?demesi,Other Income
+nakit olarak sigorta ?demesi geliri,Other Income
+d?zenli sigorta ?demesi,Other Income
+d?zenli sigorta ?demesi geliri,Other Income
+tek seferlik sigorta ?demesi,Other Income
+tek seferlik sigorta ?demesi geliri,Other Income
+ek olarak sigorta ?demesi,Other Income
