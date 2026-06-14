@@ -16,13 +16,16 @@ class BrandMark extends StatelessWidget {
   Widget build(BuildContext context) {
     final cornerRadius = radius ?? size * 0.28;
 
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(cornerRadius),
-      child: Image.asset(
-        assetPath,
-        width: size,
-        height: size,
-        fit: BoxFit.cover,
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(cornerRadius),
+        child: Image.asset(
+          assetPath,
+          width: size,
+          height: size,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

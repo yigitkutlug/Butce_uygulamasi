@@ -12,6 +12,7 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = (String key) => AppLocalizer.text(controller, key);
+
     return Scaffold(
       appBar: AppBar(title: Text(t('about'))),
       body: ListView(
@@ -52,17 +53,21 @@ class AboutScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   _FeatureRow(
-                      icon: Icons.smart_toy_rounded,
-                      text: 'AI kategori tahmini'),
+                    icon: Icons.smart_toy_rounded,
+                    text: 'AI kategori tahmini',
+                  ),
                   _FeatureRow(
-                      icon: Icons.bar_chart_rounded,
-                      text: 'Aylık özet ve trend takibi'),
+                    icon: Icons.bar_chart_rounded,
+                    text: 'Aylık özet ve trend takibi',
+                  ),
                   _FeatureRow(
-                      icon: Icons.currency_exchange_rounded,
-                      text: 'Canlı döviz dönüştürme'),
+                    icon: Icons.currency_exchange_rounded,
+                    text: 'Canlı döviz dönüştürme',
+                  ),
                   _FeatureRow(
-                      icon: Icons.security_rounded,
-                      text: 'JWT tabanlı güvenli oturum'),
+                    icon: Icons.security_rounded,
+                    text: 'JWT tabanlı güvenli oturum',
+                  ),
                 ],
               ),
             ),

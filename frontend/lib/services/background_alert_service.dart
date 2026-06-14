@@ -9,7 +9,7 @@ import 'settings_storage.dart';
 import 'token_storage.dart';
 
 const String _apiFromEnv = String.fromEnvironment('API_BASE_URL');
-const String _productionApi = 'https://budget-tracker-api-anv1.onrender.com';
+const String _productionApi = 'https://butce-uygulamasi.onrender.com';
 const String _androidEmulatorApi = 'http://10.0.2.2:8000';
 const String _localApi = 'http://127.0.0.1:8000';
 
